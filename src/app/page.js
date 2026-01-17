@@ -8,6 +8,7 @@ import Portfolios2 from "@/components/sections/portfolios/Portfolios2";
 import PricingPlan from "@/components/sections/pricing-plan/PricingPlan";
 import Process from "@/components/sections/process/Process";
 import Services2 from "@/components/sections/services/Services2";
+import Services6 from "@/components/sections/services/Services6";
 import Team1 from "@/components/sections/teams/Team1";
 import Testimonials2 from "@/components/sections/testimonials/Testimonials2";
 import BackToTop from "@/components/shared/others/BackToTop";
@@ -26,6 +27,7 @@ export default function Home() {
 						<Hero2 />
 						<Brands2 />
 						<About2 />
+						<Services6/>
 						<Services2 />
 						<Portfolios2 />
 						<Process />

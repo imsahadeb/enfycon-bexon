@@ -39,11 +39,11 @@ const Services6 = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col-12">
-						<div className="sec-heading sec-heading-centered style-2 style-6 ">
+						<div className="sec-heading sec-heading-left style-2 style-6 ">
 							<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
 								<i className="tji-box"></i>OUR Services
 							</span>
-							<h2 className="sec-title title-anim tw:!text-white">
+							<h2 className="sec-title  title-anim tw:!text-white ">
 								Comprehensive Services for Corporates
 							</h2>
 						</div>

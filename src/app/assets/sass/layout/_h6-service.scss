@@ -11,6 +11,7 @@ START: Service CSS
 		background-color: var(--tj-color-common-white);
 		border-radius: 10px;
 		overflow: hidden;
+
 		.h6-service {
 			&-thumb {
 				min-height: 280px;
@@ -28,16 +29,20 @@ START: Service CSS
 					transform: perspective(0) rotateX(0) rotateY(0) scaleX(1) scaleY(1);
 					border-radius: 10px;
 				}
+
 				@media #{$xl, $lg, $xs} {
 					min-height: 240px;
+
 					img {
 						min-height: 240px;
 					}
 				}
 			}
+
 			&-content {
 				padding: 25px 15px 30px;
 				height: 100%;
+
 				.title {
 					font-weight: var(--tj-fw-sbold);
 					margin: 0;
@@ -49,12 +54,15 @@ START: Service CSS
 						}
 					}
 				}
+
 				.desc {
 					margin-top: 15px;
+
 					&:last-of-type {
 						margin-bottom: 0;
 					}
 				}
+
 				.text-btn {
 					.btn-icon {
 						width: 40px;
@@ -62,12 +70,14 @@ START: Service CSS
 					}
 				}
 			}
+
 			&-index {
 				color: var(--tj-color-text-body-3);
 				font-weight: var(--tj-fw-sbold);
 				margin-bottom: 16px;
 			}
 		}
+
 		&:hover {
 			.h6-service {
 				&-thumb {
