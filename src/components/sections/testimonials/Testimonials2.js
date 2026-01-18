@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import TestimonialsCard2 from "@/components/shared/cards/TestimonialsCard2";
 import Ratings1 from "@/components/shared/ratings/Ratings1";
 import getTestimonials from "@/libs/getTestimonials";
@@ -10,9 +11,8 @@ const Testimonials2 = ({ type }) => {
 
 	return (
 		<section
-			className={`tj-testimonial-section-2 ${
-				type === 2 ? "section-bottom-gap" : "section-gap"
-			}`}
+			className={`tj-testimonial-section-2 ${type === 2 ? "section-bottom-gap" : "section-gap"
+				}`}
 		>
 			<div className="container">
 				<div className="row row-gap-3">
@@ -22,16 +22,19 @@ const Testimonials2 = ({ type }) => {
 							data-wow-delay=".3s"
 						>
 							<div className="testimonial-img">
-								<img
+								<Image
 									data-speed=".8"
 									src="/images/testimonial/testimonial-img.webp"
-									alt=""
+									alt="Customer testimonials"
+									width={600}
+									height={700}
+									quality={85}
+									style={{ width: "100%", height: "auto" }}
 								/>
 								<div className="sec-heading style-2">
 									<h2
-										className={`sec-title ${
-											type === 2 ? "title-anim" : "text-anim"
-										}`}
+										className={`sec-title ${type === 2 ? "title-anim" : "text-anim"
+											}`}
 									>
 										Hear from Our <span>Customer.</span>
 									</h2>
@@ -71,10 +74,10 @@ const Testimonials2 = ({ type }) => {
 							>
 								{testimonials?.length
 									? testimonials?.map((testimonial, idx) => (
-											<SwiperSlide key={idx}>
-												<TestimonialsCard2 testimonial={testimonial} />
-											</SwiperSlide>
-									  ))
+										<SwiperSlide key={idx}>
+											<TestimonialsCard2 testimonial={testimonial} />
+										</SwiperSlide>
+									))
 									: ""}
 								<div className="swiper-pagination-area"></div>
 							</Swiper>

@@ -16,10 +16,11 @@ const TestimonialsCard2 = ({ testimonial }) => {
 					<div className="author-img">
 						<Image
 							src={img ? img : "/images/testimonial/client-1.webp"}
-							alt="Images"
+							alt={authorName || "Client"}
 							width={89}
 							height={89}
-							style={{ height: "auto" }}
+							quality={85}
+							style={{ width: "100%", height: "auto" }}
 						/>
 					</div>
 					<div className="author-header">
