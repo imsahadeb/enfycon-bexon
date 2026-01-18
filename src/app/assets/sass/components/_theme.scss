@@ -268,14 +268,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
 * {
 	scrollbar-width: thin;
-	scrollbar-color: var(--tj-color-theme-primary) var(--tj-color-common-black);
+	scrollbar-color: var(--tj-color-grey-1) var(--tj-color-common-black);
 }
 ::-webkit-scrollbar {
 	height: 4px;
 	width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--tj-color-theme-primary);
+	background: var(--tj-color-grey-1);
 	-webkit-border-radius: 1ex;
 	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
