@@ -13,13 +13,6 @@ const Services6 = () => {
 
 	const tabs = [
 		{
-			id: "ai-allied-services",
-			name: "AI & Allied Services",
-			title: "AI & Allied Services",
-			desc: "Transform your business with cutting-edge AI solutions. We harness machine learning and emerging technologies to build intelligent systems that automate processes, enhance decision-making, and drive innovation.",
-			services: getALlServices()?.slice(0, 3),
-		},
-		{
 			id: "it-professional-staffing",
 			name: "IT Professional Staffing",
 			title: "IT Professional Staffing",
@@ -45,6 +38,14 @@ const Services6 = () => {
 				},
 			],
 		},
+		{
+			id: "ai-allied-services",
+			name: "AI & Allied Services",
+			title: "AI & Allied Services",
+			desc: "Transform your business with cutting-edge AI solutions. We harness machine learning and emerging technologies to build intelligent systems that automate processes, enhance decision-making, and drive innovation.",
+			services: getALlServices()?.slice(0, 3),
+		},
+		
 		{
 			id: "data-analytics",
 			name: "Data & Analytics",
