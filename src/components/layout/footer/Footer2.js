@@ -145,9 +145,9 @@ const Footer2 = () => {
 					</div>
 				</div>
 			</div>
-			<div className="footer-marquee">
+			{/* <div className="footer-marquee">
 				<MarqueeSlider1 />
-			</div>
+			</div> */}
 			<div className="tj-copyright-area-2">
 				<div className="container">
 					<div className="row">
