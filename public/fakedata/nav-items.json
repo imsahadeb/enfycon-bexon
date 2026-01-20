@@ -80,14 +80,24 @@
 				"name": "Main Pages",
 				"path": "#",
 				"items": [
-					{ "id": 1, "name": "About us", "path": "/about", "badge": null },
+					{
+						"id": 1,
+						"name": "About us",
+						"path": "/about",
+						"badge": null
+					},
 					{
 						"id": 2,
 						"name": "Our history",
 						"path": "/history",
 						"badge": "HOT"
 					},
-					{ "id": 3, "name": "Team", "path": "/team", "badge": null },
+					{
+						"id": 3,
+						"name": "Team",
+						"path": "/team",
+						"badge": null
+					},
 					{
 						"id": 4,
 						"name": "Team details",
@@ -112,9 +122,24 @@
 						"path": "/pricing-plan",
 						"badge": null
 					},
-					{ "id": 8, "name": "Feedbacks", "path": "#", "badge": null },
-					{ "id": 9, "name": "Faq", "path": "/faq", "badge": null },
-					{ "id": 10, "name": "Conatct", "path": "/contact", "badge": null }
+					{
+						"id": 8,
+						"name": "Feedbacks",
+						"path": "#",
+						"badge": null
+					},
+					{
+						"id": 9,
+						"name": "Faq",
+						"path": "/faq",
+						"badge": null
+					},
+					{
+						"id": 10,
+						"name": "Conatct",
+						"path": "/contact",
+						"badge": null
+					}
 				]
 			},
 			{
@@ -122,7 +147,12 @@
 				"name": "Other pages",
 				"path": "#",
 				"items": [
-					{ "id": 1, "name": "Services", "path": "/services", "badge": null },
+					{
+						"id": 1,
+						"name": "Services",
+						"path": "/services",
+						"badge": null
+					},
 					{
 						"id": 2,
 						"name": "Service details",
@@ -184,14 +214,24 @@
 				"name": "Shop pages",
 				"path": "/shop",
 				"items": [
-					{ "id": 1, "name": "Shop", "path": "/shop", "badge": "HOT" },
+					{
+						"id": 1,
+						"name": "Shop",
+						"path": "/shop",
+						"badge": "HOT"
+					},
 					{
 						"id": 2,
 						"name": "Shop details",
 						"path": "/shop/1",
 						"badge": null
 					},
-					{ "id": 3, "name": "Cart", "path": "/cart", "badge": null },
+					{
+						"id": 3,
+						"name": "Cart",
+						"path": "/cart",
+						"badge": null
+					},
 					{
 						"id": 4,
 						"name": "Checkout",
@@ -222,8 +262,18 @@
 						"path": "/password",
 						"badge": null
 					},
-					{ "id": 9, "name": "Order confirm", "path": "#", "badge": null },
-					{ "id": 10, "name": "Coming soon", "path": "#", "badge": null }
+					{
+						"id": 9,
+						"name": "Order confirm",
+						"path": "#",
+						"badge": null
+					},
+					{
+						"id": 10,
+						"name": "Coming soon",
+						"path": "#",
+						"badge": null
+					}
 				]
 			}
 		]
@@ -273,6 +323,61 @@
 	},
 	{
 		"id": 4,
+		"name": "Industries",
+		"path": "/industries",
+		"submenu": [
+			{
+				"id": 1,
+				"name": "Banking",
+				"icon": "tji-banking",
+				"path": "/industries/banking"
+			},
+			{
+				"id": 2,
+				"name": "Finance",
+				"icon": "tji-finance",
+				"path": "/industries/finance"
+			},
+			{
+				"id": 3,
+				"name": "Healthcare",
+				"icon": "tji-healthcare",
+				"path": "/industries/healthcare"
+			},
+			{
+				"id": 4,
+				"name": "Human Resource",
+				"icon": "tji-hr",
+				"path": "/industries/human-resource"
+			},
+			{
+				"id": 5,
+				"name": "Legal",
+				"icon": "tji-legal",
+				"path": "/industries/legal"
+			},
+			{
+				"id": 6,
+				"name": "Logistics",
+				"icon": "tji-logistics",
+				"path": "/industries/logistics"
+			},
+			{
+				"id": 7,
+				"name": "Manufacturing",
+				"icon": "tji-manufacturing",
+				"path": "/industries/manufacturing"
+			},
+			{
+				"id": 8,
+				"name": "Supply Chain",
+				"icon": "tji-supply-chain",
+				"path": "/industries/supply-chain"
+			}
+		]
+	},
+	{
+		"id": 5,
 		"name": "Portfolio",
 		"path": "/portfolios",
 		"submenu": [
@@ -289,7 +394,7 @@
 		]
 	},
 	{
-		"id": 5,
+		"id": 6,
 		"name": "Blog",
 		"path": "/blogs",
 		"submenu": [
@@ -320,7 +425,7 @@
 		]
 	},
 	{
-		"id": 6,
+		"id": 7,
 		"name": "Contact",
 		"path": "/contact"
 	}

@@ -9,9 +9,10 @@ const MobileNavbar = () => {
 	const homeNav = navItems[0];
 	const pagesNav = navItems[1];
 	const serviceNav = navItems[2];
-	const portfolioNav = navItems[3];
-	const blogNav = navItems[4];
-	const contactNav = navItems[5];
+	const industriesNav = navItems[3];
+	const portfolioNav = navItems[4];
+	const blogNav = navItems[5];
+	const contactNav = navItems[6];
 	return (
 		<div className="hamburger_menu">
 			<div className="mobile_menu mean-container">
@@ -62,8 +63,8 @@ const MobileNavbar = () => {
 																		{item?.badge ? (
 																			<span
 																				className={`mega-menu-badge tj-zoom-in-out-anim ${item?.badge === "HOT"
-																						? "mega-menu-badge-hot"
-																						: ""
+																					? "mega-menu-badge-hot"
+																					: ""
 																					}`}
 																			>
 																				{item?.badge}
@@ -131,6 +132,40 @@ const MobileNavbar = () => {
 													{item?.name
 														? item?.name
 														: "Business process optimization"}
+												</span>{" "}
+												<span className="mega-menu-service-nav">
+													<i className="tji-arrow-right-long"></i>
+													<i className="tji-arrow-right-long"></i>
+												</span>
+											</Link>
+										</li>
+									))
+									: ""}
+							</MobileMenuItem>
+							<MobileMenuItem
+								text={industriesNav?.name}
+								url={industriesNav?.path ? industriesNav?.path : "#"}
+								submenuClass={"mega-menu-service"}
+							>
+								{industriesNav?.submenu?.length
+									? industriesNav?.submenu?.map((item, idx) => (
+										<li key={idx}>
+											<Link
+												className="mega-menu-service-single"
+												href={item?.path ? item?.path : "/"}
+											>
+												{" "}
+												<span className="mega-menu-service-icon">
+													<i
+														className={
+															item?.icon ? item?.icon : "tji-industry"
+														}
+													></i>
+												</span>{" "}
+												<span className="mega-menu-service-title">
+													{item?.name
+														? item?.name
+														: "Industry"}
 												</span>{" "}
 												<span className="mega-menu-service-nav">
 													<i className="tji-arrow-right-long"></i>

@@ -10,9 +10,10 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 	const homeNav = makeActiveLink(navItems[0]);
 	const pagesNav = makeActiveLink(navItems[1]);
 	const serviceNav = makeActiveLink(navItems[2]);
-	const portfolioNav = makeActiveLink(navItems[3]);
-	const blogNav = makeActiveLink(navItems[4]);
-	const contactNav = makeActiveLink(navItems[5]);
+	const industriesNav = makeActiveLink(navItems[3]);
+	const portfolioNav = makeActiveLink(navItems[4]);
+	const blogNav = makeActiveLink(navItems[5]);
+	const contactNav = makeActiveLink(navItems[6]);
 
 	return (
 		<div className="menu-area d-none d-lg-inline-flex align-items-center">
@@ -53,8 +54,8 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 																	{item?.badge ? (
 																		<span
 																			className={`mega-menu-badge tj-zoom-in-out-anim ${item?.badge === "HOT"
-																					? "mega-menu-badge-hot"
-																					: ""
+																				? "mega-menu-badge-hot"
+																				: ""
 																				}`}
 																		>
 																			{item?.badge}
@@ -122,6 +123,44 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 												{item?.name
 													? item?.name
 													: "Business process optimization"}
+											</span>{" "}
+											<span className="mega-menu-service-nav">
+												<i className="tji-arrow-right-long"></i>
+												<i className="tji-arrow-right-long"></i>
+											</span>
+										</Link>
+									</li>
+								))
+								: ""}
+						</ul>
+					</li>
+					<li
+						className={`has-dropdown ${industriesNav?.isActive ? "current-menu-ancestor" : ""
+							}`}
+					>
+						<Link href={industriesNav?.path ? industriesNav?.path : "#"}>
+							{industriesNav?.name}
+						</Link>
+						<ul className="sub-menu  mega-menu-service">
+							{industriesNav?.submenu?.length
+								? industriesNav?.submenu?.map((item, idx) => (
+									<li key={idx}>
+										<Link
+											className="mega-menu-service-single"
+											href={item?.path ? item?.path : "/"}
+										>
+											{" "}
+											<span className="mega-menu-service-icon">
+												<i
+													className={
+														item?.icon ? item?.icon : "tji-industry"
+													}
+												></i>
+											</span>{" "}
+											<span className="mega-menu-service-title">
+												{item?.name
+													? item?.name
+													: "Industry"}
 											</span>{" "}
 											<span className="mega-menu-service-nav">
 												<i className="tji-arrow-right-long"></i>
