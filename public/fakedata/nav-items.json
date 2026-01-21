@@ -179,13 +179,13 @@
 					},
 					{
 						"id": 6,
-						"name": "Blog grid",
+						"name": "Blogs",
 						"path": "/blog-grid",
 						"badge": "NEW"
 					},
 					{
 						"id": 7,
-						"name": "Blog standard",
+						"name": "Blogs-Standard",
 						"path": "/blogs",
 						"badge": null
 					},
@@ -444,18 +444,18 @@
 	},
 	{
 		"id": 5,
-		"name": "Blog",
-		"path": "/blogs",
+		"name": "Blogs",
+		"path": "/blog-grid",
 		"submenu": [
 			{
 				"id": 1,
-				"name": "Blog",
+				"name": "Blogs-Standard",
 				"path": "/blogs",
 				"badge": "NEW"
 			},
 			{
 				"id": 2,
-				"name": "Blog grid",
+				"name": "Blogs",
 				"path": "/blog-grid",
 				"badge": null
 			},
@@ -480,8 +480,7 @@
 	},
 	{
 		"id": 7,
-		"name": "Contact",
-		"path": "/contact"
+		"name": "Contact Us",
+		"path": "/contact-us"
 	}
-
 ]

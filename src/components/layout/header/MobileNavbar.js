@@ -10,8 +10,8 @@ const MobileNavbar = () => {
 	const pagesNav = navItems[1];
 	const serviceNav = navItems[2];
 	const industriesNav = navItems[3];
-	const portfolioNav = navItems[4];
-	const blogNav = navItems[5];
+	const blogsNav = navItems[4];
+	const aboutNav = navItems[5];
 	const contactNav = navItems[6];
 	return (
 		<div className="hamburger_menu">
@@ -176,40 +176,16 @@ const MobileNavbar = () => {
 									))
 									: ""}
 							</MobileMenuItem>
-							<MobileMenuItem
-								text={portfolioNav?.name}
-								url={portfolioNav?.path ? portfolioNav?.path : "#"}
-							>
-								{portfolioNav?.submenu?.length
-									? portfolioNav?.submenu?.map((item, idx) => (
-										<li
-											key={idx}
-											className={item?.isActive ? "current-menu-item" : ""}
-										>
-											<Link href={item?.path ? item?.path : "/portfolios"}>
-												{item?.name ? item?.name : "Portfolio"}
-											</Link>
-										</li>
-									))
-									: ""}
-							</MobileMenuItem>
-							<MobileMenuItem
-								text={blogNav?.name}
-								url={blogNav?.path ? blogNav?.path : "#"}
-							>
-								{blogNav?.submenu?.length
-									? blogNav?.submenu?.map((item, idx) => (
-										<li
-											key={idx}
-											className={item?.isActive ? "current-menu-item" : ""}
-										>
-											<Link href={item?.path ? item?.path : "/portfolios"}>
-												{item?.name ? item?.name : "Portfolio"}
-											</Link>
-										</li>
-									))
-									: ""}
-							</MobileMenuItem>
+							<li>
+								<Link href={blogsNav?.path ? blogsNav?.path : "#"}>
+									{blogsNav?.name}
+								</Link>
+							</li>
+							<li>
+								<Link href={aboutNav?.path ? aboutNav?.path : "#"}>
+									{aboutNav?.name}
+								</Link>
+							</li>
 							<li className="mean-last">
 								<Link href={contactNav?.path ? contactNav?.path : "#"}>
 									{" "}
