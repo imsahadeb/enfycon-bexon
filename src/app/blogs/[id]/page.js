@@ -20,7 +20,6 @@ export default async function BlogDetails({ params }) {
 		<div>
 			<BackToTop />
 			<Header />
-			<Header isStickyHeader={true} />
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
