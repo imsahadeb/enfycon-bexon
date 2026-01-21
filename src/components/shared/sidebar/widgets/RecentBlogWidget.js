@@ -36,11 +36,13 @@ const RecentBlogWidget = () => {
 								<Link href={`/blogs/${id}`}>
 									{" "}
 									<Image
-										src={featuredImage || "/images/blog/post-1.webp"}
+										src={featuredImage || "/images/blog/blogs-backdrop.jpg"}
 										alt="Blog"
 										width={150}
 										height={150}
+										unoptimized={true}
 									/>
+
 								</Link>
 							</div>
 

@@ -58,7 +58,7 @@ export async function getAllBlogs() {
             const date = new Date(post.date);
             return {
                 id: post.slug,
-                featuredImage: post.featuredImage?.node?.sourceUrl || "/images/blog/blog-1.webp",
+                featuredImage: post.featuredImage?.node?.sourceUrl || null,
                 title: post.title,
                 desc: post.excerpt,
                 author: post.author?.node?.name || "enfycon",
@@ -66,6 +66,7 @@ export async function getAllBlogs() {
                 month: date.toLocaleString("en-US", { month: "short" }),
                 category: post.categories?.nodes[0]?.name || "Technology",
             };
+
 
         }) || []
     );
@@ -112,7 +113,7 @@ export async function getBlogBySlug(slug) {
     const date = new Date(post.date);
     return {
         id: post.slug,
-        featuredImage: post.featuredImage?.node?.sourceUrl || "/images/blog/blog-1.webp",
+        featuredImage: post.featuredImage?.node?.sourceUrl || null,
         title: post.title,
         desc: post.excerpt,
         content: post.content,
@@ -121,5 +122,6 @@ export async function getBlogBySlug(slug) {
         month: date.toLocaleString("en-US", { month: "short" }),
         category: post.categories?.nodes[0]?.name || "Technology",
     };
+
 
 }

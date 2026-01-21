@@ -25,13 +25,25 @@ const BlogSingle = ({ blog, idx }) => {
 		>
 			<div className="blog-thumb">
 				<Link href={`/blogs/${id}`}>
-					<Image
-						src={featuredImage || "/images/blog/blogs-backdrop.jpg"}
-						alt={title || "Blog Image"}
-						width={870}
-						height={450}
-					/>
+					{featuredImage ? (
+						<Image
+							src={featuredImage}
+							alt={title || "Blog Image"}
+							width={870}
+							height={450}
+							unoptimized={true}
+						/>
+					) : (
+						<Image
+							src="/images/blog/blogs-backdrop.jpg"
+							alt="Fallback Blog Image"
+							width={870}
+							height={450}
+							unoptimized={true}
+						/>
+					)}
 				</Link>
+
 
 				<div className="blog-date">
 					<span className="date">{modifyNumber(day)}</span>

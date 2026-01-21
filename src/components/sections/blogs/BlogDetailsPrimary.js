@@ -13,14 +13,28 @@ const BlogDetailsPrimary = ({ post, option }) => {
 					<div className="col-lg-8">
 						<div className="post-details-wrapper">
 							<div className="blog-images wow fadeInUp" data-wow-delay=".1s">
-								<Image
-									src={featuredImage || "/images/blog/blog-1.webp"}
-									alt="Images"
-									width={870}
-									height={450}
-									style={{ height: "auto" }}
-								/>
+								{featuredImage ? (
+									<Image
+										src={featuredImage}
+										alt="Images"
+										width={870}
+										height={450}
+										style={{ height: "auto" }}
+										unoptimized={true}
+									/>
+								) : (
+									<Image
+										src="/images/blog/blogs-backdrop.jpg"
+										alt="Fallback Images"
+										width={870}
+										height={450}
+										style={{ height: "auto" }}
+										unoptimized={true}
+									/>
+								)}
 							</div>
+
+
 
 							<h2 className="title title-anim">{title}</h2>
 							<div
