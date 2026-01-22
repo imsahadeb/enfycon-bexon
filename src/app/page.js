@@ -4,7 +4,7 @@ import About3 from "@/components/sections/about/About3";
 import Blogs2 from "@/components/sections/blogs/Blogs2";
 import Brands2 from "@/components/sections/brands/Brands2";
 import Hero2 from "@/components/sections/hero/Hero2";
-import Portfolios2 from "@/components/sections/portfolios/Portfolios2";
+import Products2 from "@/components/sections/products/Products2";
 import Process from "@/components/sections/process/Process";
 import Services2 from "@/components/sections/services/Services2";
 import Faq2 from "@/components/sections/faq/Faq2";
@@ -28,7 +28,7 @@ export default function Home() {
 						<Services6 />
 						<Industries1 />
 						<About3 />
-						<Portfolios2 />
+					<Products2 />
 						<Process />
 
 						{/* <Team1 /> */}
