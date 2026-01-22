@@ -16,8 +16,8 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Leveraging advanced Artificial Intelligence to drive innovation and streamline your business operations.",
-			img: "/images/hero/slider-1.jpg",
-			thumbImg: "/images/hero/thumb-81x80-slider-1.jpg",
+			img: "/images/hero/ai.jpeg",
+			thumbImg: "/images/hero/ai_80x80.jpg",
 		},
 		{
 			subtitle: "Cyber Security",
@@ -27,8 +27,8 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Protecting your digital assets with robust security measures to ensure business continuity and safety.",
-			img: "/images/hero/slider-3.jpg",
-			thumbImg: "/images/hero/thumb-81x80-slider-3.jpg",
+			img: "/images/hero/cyber.jpg",
+			thumbImg: "/images/hero/cyber_80x80.jpg",
 		},
 		{
 			subtitle: "Talent Acquisition",
@@ -38,8 +38,8 @@ const Hero2 = () => {
 				</>
 			),
 			desc: "Providing exceptional IT staffing solutions for both US and domestic markets to meet your workforce needs.",
-			img: "/images/hero/slider-2a.jpg",
-			thumbImg: "/images/hero/thumb-81x80-slider-2a.jpg",
+			img: "/images/hero/it-stuffing.jpg",
+			thumbImg: "/images/hero/it-stuffing_80x80.jpg",
 		},
 
 	];
