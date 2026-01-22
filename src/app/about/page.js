@@ -17,7 +17,7 @@ export default function About() {
 		<div>
 			<BackToTop />
 			<Header />
-			<Header isStickyHeader={true} />
+			{/* <Header isStickyHeader={true} /> */}
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
