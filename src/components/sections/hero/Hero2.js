@@ -39,7 +39,7 @@ const Hero2 = () => {
 			),
 			desc: "Providing exceptional IT staffing solutions for both US and domestic markets to meet your workforce needs.",
 			img: "/images/hero/it-stuffing.jpg",
-			thumbImg: "/images/hero/it-stuffing_80x80.jpg",
+			thumbImg: "/images/hero/it-staffing_80x80.jpg",
 		},
 
 	];
