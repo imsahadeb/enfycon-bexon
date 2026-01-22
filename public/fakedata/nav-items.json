@@ -445,18 +445,18 @@
 	{
 		"id": 5,
 		"name": "Blogs",
-		"path": "/blog-grid",
+		"path": "/blogs",
 		"submenu": [
 			{
 				"id": 1,
 				"name": "Blogs-Standard",
-				"path": "/blogs",
+				"path": "/blogs-standard",
 				"badge": "NEW"
 			},
 			{
 				"id": 2,
 				"name": "Blogs",
-				"path": "/blog-grid",
+				"path": "/blogs",
 				"badge": null
 			},
 			{
