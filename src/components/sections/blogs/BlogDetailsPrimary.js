@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BlogDetailsPrimary = ({ post, option }) => {
 	const { prevId, nextId, isPrevItem, isNextItem } = option || {};
-	const { title, featuredImage, author, day, month, content } = post || {};
+	const { title, featuredImage, author, day, month, year, commentCount, avatar, content } = post || {};
 	return (
 		<section className="tj-blog-section section-gap slidebar-stickiy-container">
 			<div className="container">
@@ -44,7 +44,7 @@ const BlogDetailsPrimary = ({ post, option }) => {
 								<div className="category-item">
 									<div className="cate-images">
 										<Image
-											src="/images/testimonial/client-2.webp"
+											src={avatar || "/images/testimonial/client-2.webp"}
 											alt="Images"
 											width={89}
 											height={89}
@@ -62,8 +62,17 @@ const BlogDetailsPrimary = ({ post, option }) => {
 									<div className="cate-text">
 										<span className="degination">Date Released</span>
 										<h6 className="text">
-											{day} {month}
+											{day} {month}, {year}
 										</h6>
+									</div>
+								</div>
+								<div className="category-item">
+									<div className="cate-icons">
+										<i className="tji-comment"></i>
+									</div>
+									<div className="cate-text">
+										<span className="degination">Comments</span>
+										<h6 className="text">{commentCount ? String(commentCount).padStart(2, '0') : "00"} Comments</h6>
 									</div>
 								</div>
 							</div>

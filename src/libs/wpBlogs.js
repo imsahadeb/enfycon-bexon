@@ -82,6 +82,7 @@ export async function getBlogBySlug(slug) {
         title
         slug
         date
+        commentCount
         content
         excerpt
         featuredImage {
@@ -92,6 +93,9 @@ export async function getBlogBySlug(slug) {
         author {
           node {
             name
+            avatar {
+              url
+            }
           }
         }
         categories {
@@ -123,6 +127,8 @@ export async function getBlogBySlug(slug) {
     month: date.toLocaleString("en-US", { month: "short" }),
     year: date.getFullYear(),
     category: post.categories?.nodes[0]?.name || "Technology",
+    commentCount: post.commentCount || 0,
+    avatar: post.author?.node?.avatar?.url || null,
   };
 
 
