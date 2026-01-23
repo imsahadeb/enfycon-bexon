@@ -13,34 +13,52 @@ const Footer2 = () => {
 	return (
 		<footer className="tj-footer-section footer-2">
 			<div className="container">
-				{/* Top Bar: Connect with us */}
-				<div className="row">
-					<div className="col-12">
-						<div className="footer-top-bar">
-							<div className="logo-area">
-								<Link href="/">
-									<img src="/images/logos/enfycon-white.png" alt="Logos" />
-								</Link>
-							</div>
-							<div className="social-connect">
-								<span className="connect-text">Connect with us</span>
+				{/* Main Footer Area */}
+				<div className="footer-main-area">
+					<div className="row">
+						{/* Col 1: Contact & Info (Left Side) */}
+						<div className="col-xl-3 col-lg-4 col-md-6">
+							<div className="footer-widget footer-col-1">
+								<div className="logo-area mb-4">
+									<Link href="/">
+										<img src="/images/logos/enfycon-white.png" alt="Logos" />
+									</Link>
+								</div>
+								<p className="desc mb-4">
+									{footerData.contactInfo.description}
+								</p>
+
+								<div className="footer-contact-info">
+									<h5 className="title">Contact Us</h5>
+									<p className="address mb-3">{footerData.contactInfo.address}</p>
+									<ul className="list-unstyled">
+										<li className="mb-2">
+											<a href={`tel:${footerData.contactInfo.phone}`}>
+												<i className="fa-solid fa-phone me-2"></i>
+												{footerData.contactInfo.phone}
+											</a>
+										</li>
+										<li className="mb-4">
+											<a href={`mailto:${footerData.contactInfo.email}`}>
+												<i className="fa-solid fa-envelope me-2"></i>
+												{footerData.contactInfo.email}
+											</a>
+										</li>
+									</ul>
+								</div>
+
 								<div className="social-icons">
 									{footerData.socialLinks.map((social, index) => (
-										<Link key={index} href={social.link} target="_blank">
+										<Link key={index} href={social.link} target="_blank" className="me-3">
 											<i className={social.icon}></i>
 										</Link>
 									))}
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				{/* Main Footer Area */}
-				<div className="footer-main-area">
-					<div className="row">
-						{/* Col 1: Industries */}
-						<div className="col-lg-2 col-md-6">
+						{/* Col 2: Industries */}
+						<div className="col-xl-2 col-lg-2 col-md-6">
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Industries</h5>
 								<ul>
@@ -58,8 +76,8 @@ const Footer2 = () => {
 							</div>
 						</div>
 
-						{/* Col 2: Services */}
-						<div className="col-lg-3 col-md-6">
+						{/* Col 3: Services */}
+						<div className="col-xl-2 col-lg-2 col-md-6">
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Services</h5>
 								<ul>
@@ -77,8 +95,8 @@ const Footer2 = () => {
 							</div>
 						</div>
 
-						{/* Col 3: Products */}
-						<div className="col-lg-2 col-md-6">
+						{/* Col 4: Products */}
+						<div className="col-xl-2 col-lg-2 col-md-6">
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Products</h5>
 								<ul>
@@ -96,41 +114,43 @@ const Footer2 = () => {
 							</div>
 						</div>
 
-						{/* Col 4: About Us */}
-						<div className="col-lg-2 col-md-6">
-							<div className="footer-widget widget-nav-menu">
-								<h5 className="title">About Us</h5>
-								<ul>
-									{footerData.about.map((item, index) => (
-										<li key={index}>
-											<Link
-												href={item.link}
-												className={isActive(item.link) ? "active" : ""}
-											>
-												{item.label}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</div>
-						</div>
-
-						{/* Col 5: Other Links */}
-						<div className="col-lg-3 col-md-6">
-							<div className="footer-widget widget-nav-menu">
-								<h5 className="title">Other Links</h5>
-								<ul>
-									{footerData.otherLinks.map((item, index) => (
-										<li key={index}>
-											<Link
-												href={item.link}
-												className={isActive(item.link) ? "active" : ""}
-											>
-												{item.label}
-											</Link>
-										</li>
-									))}
-								</ul>
+						{/* Col 5: About & Other (Combined to save space if needed, or kept separate) */}
+						<div className="col-xl-3 col-lg-2 col-md-6">
+							<div className="row">
+								<div className="col-12">
+									<div className="footer-widget widget-nav-menu mb-4">
+										<h5 className="title">About Us</h5>
+										<ul>
+											{footerData.about.map((item, index) => (
+												<li key={index}>
+													<Link
+														href={item.link}
+														className={isActive(item.link) ? "active" : ""}
+													>
+														{item.label}
+													</Link>
+												</li>
+											))}
+										</ul>
+									</div>
+								</div>
+								{/* <div className="col-12">
+                                    <div className="footer-widget widget-nav-menu">
+                                        <h5 className="title">Other Links</h5>
+                                        <ul>
+                                            {footerData.otherLinks.map((item, index) => (
+                                                <li key={index}>
+                                                    <Link 
+                                                        href={item.link} 
+                                                        className={isActive(item.link) ? "active" : ""}
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div> */}
 							</div>
 						</div>
 					</div>
