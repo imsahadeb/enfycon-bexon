@@ -1,5 +1,5 @@
 "use client";
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
@@ -8,6 +8,29 @@ import { heroSlides } from "@/data/hero";
 import { Swiper, SwiperSlide } from "swiper/react";
 const Hero2 = () => {
 	const [controlledMainSwiper, setControlledMainSwiper] = useState(null);
+	const [slides, setSlides] = useState(heroSlides);
+
+	useEffect(() => {
+		// Import dynamically or just use the function if available
+		const allServices = require("@/libs/getALlServices").default();
+		if (allServices && allServices.length > 0) {
+			// Shuffle array
+			const shuffled = [...allServices].sort(() => 0.5 - Math.random());
+			// Get first 3
+			const selected = shuffled.slice(0, 3);
+			// Map to hero format
+			const formattedSlides = selected.map(service => ({
+				subtitle: service.title, // or category
+				title: service.title,
+				desc: service.desc ? service.desc.slice(0, 150) + (service.desc.length > 150 ? "..." : "") : "",
+				img: service.img,
+				thumbImg: service.img, // Using same image for thumb, might need CSS object-fit
+				slug: service.id
+			}));
+			setSlides(formattedSlides);
+		}
+	}, []);
+
 	return (
 		<section className="tj-slider-section">
 			<Swiper
@@ -18,12 +41,12 @@ const Hero2 = () => {
 				speed={1400}
 				autoplay={{ delay: 5000 }}
 				modules={[Autoplay, Navigation, EffectFade, Thumbs]}
-				thumbs={{ swiper: controlledMainSwiper }}
+				thumbs={{ swiper: controlledMainSwiper && !controlledMainSwiper.destroyed ? controlledMainSwiper : null }}
 				navigation={{ nextEl: ".slider-next", prevEl: ".slider-prev" }}
 				className="hero-slider"
 				style={{ height: "100%" }}
 			>
-				{heroSlides.map(({ img, title, desc, slug }, idx) => (
+				{slides.map(({ img, title, desc, slug }, idx) => (
 					<SwiperSlide
 						key={idx}
 						className="tj-slider-item"
@@ -79,16 +102,16 @@ const Hero2 = () => {
 				className="hero-thumb wow fadeIn"
 				data-wow-delay="2s"
 			>
-				{heroSlides.map(
-					({ thumbImg = "/images/hero/slider-thumb-1.webp" }, idx) => (
+				{slides.map(
+					({ thumbImg = "/images/hero/slider-thumb-1.webp", title }, idx) => (
 						<SwiperSlide key={idx} className="thumb-item">
 							<Image
 								src={thumbImg}
-								alt={`${heroSlides[idx].subtitle} thumbnail`}
+								alt={`${title} thumbnail`}
 								width={80}
 								height={80}
 								quality={85}
-								style={{ width: "100%", height: "auto" }}
+								style={{ width: "100%", height: "auto", objectFit: "cover" }}
 
 							/>
 						</SwiperSlide>
