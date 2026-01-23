@@ -1,11 +1,13 @@
 import sliceText from "@/libs/sliceText";
 import Link from "next/link";
 import React from "react";
-const HeroInner = ({ title, text, breadcrums = [] }) => {
+const HeroInner = ({ title, text, breadcrums = [], image }) => {
 	return (
 		<section
 			className="tj-page-header"
-			style={{ backgroundImage: `url('/images/bg/service-banner.jpg')` }}
+			style={{
+				backgroundImage: `url('${image ? image : "/images/bg/service-banner.jpg"}')`,
+			}}
 		>
 			<div className="container">
 				<div className="row">

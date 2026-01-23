@@ -9,6 +9,7 @@ START: Breadcrumb CSS
 		padding-bottom: 150px;
 		background-position: center;
 		background-size: cover;
+		margin-top: 80px;
 		background-repeat: no-repeat;
 		background-color: var(--tj-color-theme-dark);
 		background-blend-mode: luminosity;
@@ -17,7 +18,7 @@ START: Breadcrumb CSS
 		z-index: 2;
 
 		@media #{$lg} {
-			padding-top: 90px;
+			padding-top:90px;
 			padding-bottom: 100px;
 		}
 
