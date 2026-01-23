@@ -1,4 +1,4 @@
-import HeroInner from "@/components/sections/hero/HeroInner";
+import IndustryHero from "@/components/sections/hero/IndustryHero";
 import IndustryDetailsPrimary from "@/components/sections/industries/IndustryDetailsPrimary";
 import { industriesData } from "@/data/industriesData";
 import getPreviousNextItem from "@/libs/getPreviousNextItem";
@@ -12,10 +12,11 @@ const IndustryDetailsMain = ({ currentItemId }) => {
 
     return (
         <div>
-            <HeroInner
+            <IndustryHero
                 title={title ? title : "Industry Details"}
-                text={title ? title : "Industry Details"}
+                text={title ? `${currentItem?.desc}` : "Industry Details"}
                 breadcrums={[{ name: "Industries", path: "/industries" }]}
+                image={currentItem?.image}
             />
             <IndustryDetailsPrimary
                 option={{

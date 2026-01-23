@@ -19,20 +19,11 @@ const IndustryDetailsPrimary = ({ option }) => {
     const { title, desc, image } = currentItem || {};
 
     return (
-        <section className="tj-service-area section-gap">
+        <section className="tj-service-area section-gap" id="industry-details">
             <div className="container">
                 <div className="row row-gap-5">
                     <div className="col-lg-8">
                         <div className="post-details-wrapper">
-                            <div className="blog-images wow fadeInUp" data-wow-delay=".1s">
-                                <Image
-                                    src={image || "/images/industries/default.png"}
-                                    alt={title || "Industry Image"}
-                                    width={870}
-                                    height={350}
-                                    className="service-details-image"
-                                />
-                            </div>
                             <h2 className="title title-anim">
                                 {title}
                             </h2>
