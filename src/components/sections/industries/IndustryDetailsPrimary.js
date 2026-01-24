@@ -34,73 +34,96 @@ const IndustryDetailsPrimary = ({ option }) => {
                                         <p className="mb-4">{desc}</p>
                                     )}
                                 </div>
-
-                                {/* Key Benefits Section */}
-                                {currentItem.benefits && (
-                                    <div className="industry-benefits-section mt-5 wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 className="section-title text-primary mb-4">Key Benefits of AI in {title}</h3>
-                                        <div className="industry-benefits-grid">
-                                            {currentItem.benefits.map((benefit, idx) => (
-                                                <div className="industry-benefit-card" key={idx}>
-                                                    <div className="icon">
-                                                        <i className={benefit.icon}></i>
-                                                    </div>
-                                                    <div className="content">
-                                                        <h5 className="title">{benefit.title}</h5>
-                                                        <p>{benefit.desc}</p>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* Use Cases Section */}
-                                {currentItem.useCases && (
-                                    <div className="industry-use-cases-section mt-5 wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 className="section-title text-primary mb-4">High-Impact AI Use Cases in {title}</h3>
-                                        <div className="industry-use-cases-grid">
-                                            {currentItem.useCases.map((useCase, idx) => (
-                                                <div className="industry-use-case-card" key={idx}>
-                                                    <div className="icon">
-                                                        <i className={useCase.icon}></i>
-                                                    </div>
-                                                    <div className="content">
-                                                        <h5 className="title">{useCase.title}</h5>
-                                                        <p>{useCase.desc}</p>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* The Edge Section */}
-                                {currentItem.edge && (
-                                    <div className="industry-edge-section mt-5 wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 className="section-title text-primary mb-4">The Enfycon Edge</h3>
-                                        <ul className="industry-edge-list">
-                                            {currentItem.edge.map((item, idx) => (
-                                                <li key={idx}>
-                                                    <i className="tji-check"></i>
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                )}
-
-                                {/* CTA Section */}
-                                {currentItem.cta && (
-                                    <div className="industry-cta-box mt-5 wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 className="title text-primary">{currentItem.cta.title}</h3>
-                                        <p className="desc">{currentItem.cta.desc}</p>
-                                        <Link href={currentItem.cta.buttonLink} className="tj-btn-primary">
-                                            {currentItem.cta.buttonText} <i className="tji-arrow-right"></i>
-                                        </Link>
-                                    </div>
-                                )}
                             </div>
+
+                            {/* Detail Sections (Alternating) */}
+                            {currentItem.details && (
+                                <div className="industry-details-section">
+                                    {currentItem.details.map((detail, idx) => (
+                                        <div className={`industry-detail-row ${idx % 2 !== 0 ? 'reverse' : ''}`} key={idx}>
+                                            <div className="industry-detail-content">
+                                                <h3 className="title">{detail.title}</h3>
+                                                <p className="desc">{detail.desc}</p>
+                                            </div>
+                                            <div className="industry-detail-image">
+                                                <Image
+                                                    src={detail.image}
+                                                    alt={detail.title}
+                                                    width={800}
+                                                    height={600}
+                                                    style={{ width: "100%", height: "auto", borderRadius: "12px" }}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Key Benefits Section */}
+                            {currentItem.benefits && (
+                                <div className="industry-benefits-section mt-5 wow fadeInUp" data-wow-delay=".3s">
+                                    <h3 className="section-title text-primary mb-4">Key Benefits of AI in {title}</h3>
+                                    <div className="industry-benefits-grid">
+                                        {currentItem.benefits.map((benefit, idx) => (
+                                            <div className="industry-benefit-card" key={idx}>
+                                                <div className="icon">
+                                                    <i className={benefit.icon}></i>
+                                                </div>
+                                                <div className="content">
+                                                    <h5 className="title">{benefit.title}</h5>
+                                                    <p>{benefit.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Use Cases Section */}
+                            {currentItem.useCases && (
+                                <div className="industry-use-cases-section mt-5 wow fadeInUp" data-wow-delay=".3s">
+                                    <h3 className="section-title text-primary mb-4">High-Impact AI Use Cases in {title}</h3>
+                                    <div className="industry-use-cases-grid">
+                                        {currentItem.useCases.map((useCase, idx) => (
+                                            <div className="industry-use-case-card" key={idx}>
+                                                <div className="icon">
+                                                    <i className={useCase.icon}></i>
+                                                </div>
+                                                <div className="content">
+                                                    <h5 className="title">{useCase.title}</h5>
+                                                    <p>{useCase.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* The Edge Section */}
+                            {currentItem.edge && (
+                                <div className="industry-edge-section mt-5 wow fadeInUp" data-wow-delay=".3s">
+                                    <h3 className="section-title text-primary mb-4">The Enfycon Edge</h3>
+                                    <ul className="industry-edge-list">
+                                        {currentItem.edge.map((item, idx) => (
+                                            <li key={idx}>
+                                                <i className="tji-check"></i>
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* CTA Section */}
+                            {currentItem.cta && (
+                                <div className="industry-cta-box mt-5 wow fadeInUp" data-wow-delay=".3s">
+                                    <h3 className="title text-primary">{currentItem.cta.title}</h3>
+                                    <p className="desc">{currentItem.cta.desc}</p>
+                                    <Link href={currentItem.cta.buttonLink} className="tj-btn-primary">
+                                        {currentItem.cta.buttonText} <i className="tji-arrow-right"></i>
+                                    </Link>
+                                </div>
+                            )}
 
                             <div
                                 className="tj-post__navigation mb-0 wow fadeInUp"

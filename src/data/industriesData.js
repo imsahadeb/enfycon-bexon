@@ -4,69 +4,69 @@ export const industriesData = [
         title: "Banking",
         desc: "Empowering banking institutions with secure digital solutions, modern core banking systems, and innovative fintech platforms for enhanced customer experiences.",
         image: "/images/industries/banking.jpg",
-        icon: "tji-banking",
+        icon: "fa-regular fa-building-columns",
         benefits: [
             {
                 title: "Enhanced Fraud Detection",
                 desc: "Real-time AI analysis of transaction patterns to detect and prevent fraudulent activities instantly.",
-                icon: "tji-shield"
+                icon: "fa-regular fa-shield-check"
             },
             {
                 title: "Personalized Banking Experience",
                 desc: "AI-driven insights offer tailored financial advice and product recommendations to customers.",
-                icon: "tji-user"
+                icon: "fa-regular fa-user-tag"
             },
             {
                 title: "Automated Customer Support",
                 desc: "Intelligent chatbots and virtual assistants handle inquiries 24/7, reducing wait times.",
-                icon: "tji-chat"
+                icon: "fa-regular fa-headset"
             },
             {
                 title: "Risk Management & Compliance",
                 desc: "Automated regulatory reporting and risk assessment models ensure compliance with evolving laws.",
-                icon: "tji-barchart"
+                icon: "fa-regular fa-file-contract"
             },
             {
                 title: "Optimized Loan Processing",
                 desc: "AI algorithms assess creditworthiness faster and more accurately, speeding up loan approvals.",
-                icon: "tji-file"
+                icon: "fa-regular fa-file-invoice-dollar"
             },
             {
                 title: "Operational Cost Reduction",
                 desc: "Automation of routine tasks reduces manual errors and operational overhead.",
-                icon: "tji-growth"
+                icon: "fa-regular fa-chart-line-down"
             }
         ],
         useCases: [
             {
                 title: "Algorithmic Trading",
                 desc: "High-frequency trading algorithms execute trades at optimal prices based on market data.",
-                icon: "tji-chart"
+                icon: "fa-regular fa-chart-network"
             },
             {
                 title: "Credit Scoring Modeling",
                 desc: "Machine learning models analyze alternative data sources for more inclusive credit scoring.",
-                icon: "tji-check"
+                icon: "fa-regular fa-star-half-stroke"
             },
             {
                 title: "KYC/AML Automation",
                 desc: "Computer vision and NLP streamline Know Your Customer and Anti-Money Laundering processes.",
-                icon: "tji-search"
+                icon: "fa-regular fa-id-card"
             },
             {
                 title: "Chatbot Banking",
                 desc: "Conversational AI allows users to check balances, transfer funds, and pay bills via chat.",
-                icon: "tji-chat"
+                icon: "fa-regular fa-comments-dollar"
             },
             {
                 title: "Predictive Analytics",
                 desc: "Forecasting market trends and customer behavior to inform strategic decisions.",
-                icon: "tji-star"
+                icon: "fa-regular fa-crystal-ball"
             },
             {
                 title: "Robo-Advisory",
                 desc: "Automated investment management services based on user risk profiles and goals.",
-                icon: "tji-robot"
+                icon: "fa-regular fa-robot"
             }
         ],
         edge: [
@@ -81,83 +81,95 @@ export const industriesData = [
             desc: "Partner with Enfycon to leverage AI for secure, efficient, and customer-first banking solutions.",
             buttonText: "Contact Us",
             buttonLink: "/contact"
-        }
+        },
+        details: [
+            {
+                title: "AI-Powered Customer Insights",
+                desc: "Unlock the power of your data to understand customer behavior like never before. Our AI solutions analyze transaction history and interaction patterns to predict needs and personalize offers.",
+                image: "/images/industries/banking/banking-1.jpg"
+            },
+            {
+                title: "Seamless Digital Onboarding",
+                desc: "Reduce friction and abandonment rates with fully automated, secure digital verification processes. Enable customers to open accounts in minutes, not days, from anywhere in the world.",
+                image: "/images/industries/banking/banking-2.jpg"
+            }
+        ]
     },
     {
         id: "finance",
         title: "Finance",
         desc: "Transforming financial services with intelligent automation, risk management solutions, and next-generation payment systems for the digital economy.",
         image: "/images/industries/finance.jpg",
-        icon: "tji-finance",
+        icon: "fa-regular fa-chart-pie",
     },
     {
         id: "healthcare",
         title: "Healthcare",
         desc: "Revolutionizing healthcare delivery with digital health platforms, telemedicine solutions, and advanced patient management systems.",
         image: "/images/industries/health-care.jpg",
-        icon: "tji-healthcare",
+        icon: "fa-regular fa-heart-pulse",
         benefits: [
             {
                 title: "Accelerated and Accurate Diagnostics",
                 desc: "AI-powered tools analyze imaging, pathology, and history with unmatched speed — reducing turnaround from days to minutes.",
-                icon: "tji-service-1"
+                icon: "fa-regular fa-microscope"
             },
             {
                 title: "Personalized Treatment Plans",
                 desc: "Precision medicine tailored to each patient's genetic and clinical profile for higher efficacy and fewer side effects.",
-                icon: "tji-process-1"
+                icon: "fa-regular fa-dna"
             },
             {
                 title: "Reduced Administrative Burden",
                 desc: "Automated documentation and billing through NLP and voice-to-text reduce admin time by up to 45% per patient.",
-                icon: "tji-list"
+                icon: "fa-regular fa-file-medical"
             },
             {
                 title: "Operational Efficiency",
                 desc: "AI optimizes triage, scheduling, and resource allocation to improve hospital throughput.",
-                icon: "tji-performance"
+                icon: "fa-regular fa-hospital-user"
             },
             {
                 title: "Enhanced Patient Engagement",
                 desc: "Virtual assistants and reminders improve adherence to treatment plans.",
-                icon: "tji-user"
+                icon: "fa-regular fa-users-medical"
             },
             {
                 title: "Better Risk Management",
                 desc: "Proactive identification of at-risk patients allows for early intervention.",
-                icon: "tji-protection"
+                icon: "fa-regular fa-shield-virus"
             }
         ],
         useCases: [
             {
                 title: "AI-Assisted Medical Imaging Analysis",
                 desc: "Deploy CNN-based models integrated with PACS for real-time anomaly detection with explainable AI overlays.",
-                icon: "tji-eye-box"
+                icon: "fa-regular fa-x-ray"
             },
             {
                 title: "Predictive Patient Risk Stratification",
                 desc: "Time-series analysis and EHR data predict risks for sepsis, cardiac events, and chronic deterioration.",
-                icon: "tji-chart"
+                icon: "fa-regular fa-monitor-heart-rate"
             },
             {
                 title: "Clinical Documentation Automation",
                 desc: "Medical NLP models transcribe, summarize, and auto-structure physician notes directly into EMRs.",
-                icon: "tji-comment"
+                icon: "fa-regular fa-notes-medical"
             },
             {
                 title: "Virtual Health Assistants",
                 desc: "Multilingual conversational agents for triage, symptom checking, and appointment scheduling.",
-                icon: "tji-chat"
+                icon: "fa-regular fa-user-doctor-message"
             },
             {
                 title: "AI in Drug Discovery",
                 desc: "Generative models for molecule design, biomarker tracing, and protein structure prediction.",
-                icon: "tji-innovative"
+                icon: "fa-regular fa-flask-round-potion"
             },
             {
                 title: "Hospital Operations Optimization",
                 desc: "Reinforcement learning-based simulators for optimizing bed occupancy and surgical schedules.",
-                icon: "tji-operations"
+                icon: "fa-regular fa-bed-pulse"
             }
         ],
         edge: [
@@ -172,7 +184,19 @@ export const industriesData = [
             desc: "Let Enfycon help you unlock clinical, operational, and research excellence with custom AI solutions.",
             buttonText: "Contact Us",
             buttonLink: "/contact"
-        }
+        },
+        details: [
+            {
+                title: "Precision Medicine at Scale",
+                desc: "Leverage genomic data and clinical history to tailor treatments to individual patients. Our AI models identify the most effective therapies with minimal side effects.",
+                image: "/images/industries/healthcare-1.jpg"
+            },
+            {
+                title: "Smart Hospital Management",
+                desc: " Optimize resource allocation, from bed management to staff scheduling. Real-time predictive analytics ensure your facility operates at peak efficiency during high-demand periods.",
+                image: "/images/industries/healthcare-2.jpg"
+            }
+        ]
     },
     {
         id: "human-resource",

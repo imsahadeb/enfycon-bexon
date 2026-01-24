@@ -146,16 +146,24 @@ START: Industry Section CSS
     li {
         display: flex;
         align-items: flex-start;
-        gap: 15px;
-        margin-bottom: 15px;
+        gap: 12px;
+        margin-bottom: 12px;
         font-size: 16px;
-        color: var(--tj-color-heading-primary);
-        font-weight: var(--tj-fw-medium);
+        color: var(--tj-color-text-body);
+        font-weight: var(--tj-fw-regular);
+        line-height: 1.6;
 
         i {
-            color: var(--tj-color-theme-primary);
-            font-size: 20px;
-            margin-top: 3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: var(--tj-color-theme-primary);
+            color: var(--tj-color-common-white);
+            border-radius: 50%;
+            font-size: 10px;
+            margin-top: 4px;
             flex-shrink: 0;
         }
     }
@@ -178,6 +186,73 @@ START: Industry Section CSS
 
     @media #{$xs} {
         padding: 30px 20px;
+    }
+}
+
+.industry-details-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .industry-detail-row {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 60px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .industry-detail-content {
+            flex: 1;
+
+            .title {
+                font-size: 30px;
+                margin-bottom: 20px;
+                color: var(--tj-color-heading-primary);
+
+                @media #{$sm, $xs} {
+                    font-size: 24px;
+                }
+            }
+
+            .desc {
+                font-size: 16px;
+                line-height: 1.6;
+                color: var(--tj-color-text-body);
+                margin-bottom: 0;
+            }
+        }
+
+        .industry-detail-image {
+            flex: 1;
+
+            img {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @media #{$md, $sm, $xs} {
+            flex-direction: column;
+            gap: 30px;
+
+            &.reverse {
+                flex-direction: column;
+            }
+
+            .industry-detail-content {
+                order: 2;
+            }
+
+            .industry-detail-image {
+                order: 1;
+                width: 100%;
+            }
+        }
     }
 }
 
