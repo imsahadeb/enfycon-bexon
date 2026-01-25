@@ -222,7 +222,7 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 								<div className="mega-menu-wrapper">
 									{aboutNav?.submenu?.length
 										? aboutNav?.submenu?.map((section, idx) => (
-											<div key={idx} className="mega-menu-pages-single">
+											<div key={idx} className="mega-menu-pages-single mega-menu-service-col">
 												<div className="mega-menu-pages-single-inner">
 													<h6 className="mega-menu-title">
 														{section?.name}
