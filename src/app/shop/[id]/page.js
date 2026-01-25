@@ -17,7 +17,11 @@ export async function generateMetadata({ params }) {
 		params,
 		items,
 		resourceName: "Product",
-		idParser: (id) => parseInt(id)
+		idParser: (id) => parseInt(id),
+		keywordContext: (item) => {
+			const tags = item.tags?.join(" ") || "";
+			return `${item.title} ${item.brand || ""} ${item.category || ""} ${item.productType || ""} ${tags}`;
+		}
 	});
 }
 export default async function ProductDetails({ params }) {

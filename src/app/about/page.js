@@ -17,6 +17,7 @@ import { constructMetadata } from "@/libs/seo";
 export const metadata = constructMetadata({
 	title: "About Us - enfycon",
 	description: "Learn about Enfycon, our mission, vision, and the team driving technological excellence.",
+	image: "/images/bg/service-banner.jpg",
 });
 
 export default function About() {

@@ -15,7 +15,14 @@ export async function generateMetadata({ params }) {
 	return generateDynamicMetadata({
 		params,
 		items,
-		resourceName: "Service"
+		resourceName: "Service",
+		keywordContext: (item) => {
+			const challenges = item.challenges?.map(c => `${c.title} ${c.desc}`).join(" ") || "";
+			const keyBenefits = item.keyBenefits?.map(b => `${b.title} ${b.desc}`).join(" ") || "";
+			const faqs = item.faqs?.map(f => `${f.question} ${f.answer}`).join(" ") || "";
+			const whyenfycon = item.whyenfycon?.join(" ") || "";
+			return `${item.title} ${item.desc} ${item.overview || ""} ${challenges} ${keyBenefits} ${faqs} ${whyenfycon}`;
+		}
 	});
 }
 
