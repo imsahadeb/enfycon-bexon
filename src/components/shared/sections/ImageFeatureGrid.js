@@ -19,7 +19,7 @@ const ImageFeatureGrid = ({ title, items, gridClass = "image-feature-grid", sect
                                         alt={item.title}
                                         width={400}
                                         height={250}
-                                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 }
                             </div>
