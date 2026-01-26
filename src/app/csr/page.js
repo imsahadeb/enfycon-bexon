@@ -14,6 +14,8 @@ export const metadata = {
 };
 
 import CsrProjects from "@/components/sections/csr/CsrProjects";
+import CsrImpact from "@/components/sections/csr/CsrImpact";
+import CsrApproach from "@/components/sections/csr/CsrApproach";
 
 const CsrFeatured = ({ data }) => {
     return (
@@ -78,6 +80,12 @@ export default function CsrPage() {
                             image={csrData.hero.image}
                         />
 
+                        {/* Our Approach - White BG */}
+                        <CsrApproach data={csrData.approach} />
+
+                        {/* Impact Stats - Blue BG */}
+                        <CsrImpact data={csrData.impactStats} />
+
                         {/* Projects - White BG */}
                         <CsrProjects data={csrData.projects} />
 
@@ -96,10 +104,7 @@ export default function CsrPage() {
                         {/* Featured - White BG */}
                         <CsrFeatured data={csrData.featured} />
 
-                        {/* Partners - Gray BG (Testimonials2) */}
-                        <div className="bg-gray-1">
-                            <Testimonials2 />
-                        </div>
+
 
                     </main>
                     <Footer2 />

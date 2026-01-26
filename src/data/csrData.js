@@ -6,8 +6,8 @@ export const csrData = {
         breadcrums: [{ name: "CSR", path: "/csr" }]
     },
     projects: {
-        title: "Our CSR Initiatives",
-        subtitle: "Committed to making a difference through sustainable social impact initiatives.",
+        title: "Our Initiatives",
+        subtitle: "Making a difference through simple efforts that bring small but meaningful change.",
         items: [
             {
                 title: "Food Distribution at Adruta Children Home",
@@ -41,10 +41,27 @@ export const csrData = {
             }
         ]
     },
+    impactStats: {
+        image: "/images/csr/grad.jpg",
+        stats: [
+            {
+                value: "10,000+",
+                suffix: "Students",
+                label: "Empowered through our digital literacy programs"
+            },
+            {
+                value: "50+",
+                suffix: "Schools",
+                label: "Supported with infrastructure and learning aids",
+                subtext: ""
+            }
+        ],
+        footerText: "*Data as of current financial year"
+    },
     impact: {
         title: "Putting People First",
         desc: "The Enfycon Group is one of India's oldest conglomerates with diversified business interests. By adopting and adapting new business solutions, the Group has stayed relevant and an industry leader. The Group has also proactively worked on being responsible corporate citizens.",
-        image: "/images/csr/clothes-distribution-2.jpg" // Using clothes distribution image
+        image: "/images/csr/grad.jpg" // Using clothes distribution image
     },
     featured: {
         title: "FEATURED PROJECTS",
@@ -67,6 +84,30 @@ export const csrData = {
                 desc: "Sometimes features require a short description. This can be detailed description or just a short text.",
                 icon: "fa-light fa-book",
                 color: "var(--tj-color-theme-primary)"
+            }
+        ]
+    },
+    approach: {
+        title: "OUR APPROACH",
+        description: "At enfycon, we view our role in the community as a thoughtful and evolving effort. As a growing technology company, we focus on contributing in meaningful ways within our current capacity, while building a foundation to do more as we grow. Our actions are guided by awareness, care, and a sense of shared responsibility toward the communities around us. We believe that meaningful contribution develops over time, shaped by learning, intent, and steady progress.",
+        items: [
+            {
+                title: "Education First",
+                description: "Supporting basic learning needs for children",
+                icon: "fa-light fa-book-open",
+                color: "#003366"
+            },
+            {
+                title: "Care & Nutrition",
+                description: "Participating in food and care initiatives when possible",
+                icon: "fa-light fa-apple-whole",
+                color: "#0056b3"
+            },
+            {
+                title: "Responsible Growth",
+                description: "Expanding our efforts steadily and transparently",
+                icon: "fa-light fa-seedling",
+                color: "#28a745"
             }
         ]
     }
