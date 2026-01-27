@@ -76,13 +76,58 @@ const BlogDetailsPrimary = ({ post, option }) => {
 									</div>
 								</div>
 							</div>
-							<div className="blog-text">
-								<div
-									className="wow fadeInUp wp-content"
-									data-wow-delay=".3s"
-									dangerouslySetInnerHTML={{ __html: content }}
-								/>
-							</div>
+
+							{/* Table of Contents */}
+							{(() => {
+								// Process content to extract headings and inject IDs
+								const processContent = (html) => {
+									if (!html) return { processedContent: "", headings: [] };
+
+									const headings = [];
+									const processedContent = html.replace(/<h([2-4])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
+										const cleanText = text.replace(/<[^>]*>/g, '');
+										const id = cleanText
+											.toLowerCase()
+											.replace(/[^a-z0-9]+/g, '-')
+											.replace(/(^-|-$)/g, '');
+
+										headings.push({ id, text: cleanText, level: parseInt(level) });
+										return `<h${level} id="${id}">${text}</h${level}>`;
+									});
+
+									return { processedContent, headings };
+								};
+
+								const { processedContent, headings } = processContent(content);
+
+								return (
+									<>
+										{headings.length > 0 && (
+											<div className="blog-toc-wrapper wow fadeInUp" data-wow-delay=".3s">
+												<div className="toc-header">
+													<i className="fa-regular fa-list-ul"></i>
+													<h4 className="toc-title">Table of Contents</h4>
+												</div>
+												<ul className="toc-list">
+													{headings.map((heading, index) => (
+														<li key={index} className={`toc-item level-${heading.level}`}>
+															<a href={`#${heading.id}`}>{heading.text}</a>
+														</li>
+													))}
+												</ul>
+											</div>
+										)}
+
+										<div className="blog-text">
+											<div
+												className="wow fadeInUp wp-content"
+												data-wow-delay=".3s"
+												dangerouslySetInnerHTML={{ __html: processedContent }}
+											/>
+										</div>
+									</>
+								);
+							})()}
 
 							{/* Tags and Social Share */}
 							<div className="tags-share-wrapper wow fadeInUp" data-wow-delay="0.3s">

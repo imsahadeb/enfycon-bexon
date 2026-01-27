@@ -1355,4 +1355,76 @@ blockquote {
 	}
 }
 
+// Table of Contents
+.blog-toc-wrapper {
+	background: var(--tj-color-grey-1);
+	padding: 30px;
+	border-radius: 12px;
+	margin-bottom: 40px;
+	border: 1px solid var(--tj-color-border-1);
+
+	.toc-header {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid var(--tj-color-border-1);
+
+		i {
+			color: var(--tj-color-theme-primary);
+			font-size: 20px;
+		}
+
+		.toc-title {
+			margin-bottom: 0;
+			font-size: 20px;
+			font-weight: var(--tj-fw-sbold);
+			color: var(--tj-color-heading-primary);
+		}
+	}
+
+	.toc-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.toc-item {
+			margin-bottom: 10px;
+			line-height: 1.5;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				color: var(--tj-color-text-body);
+				font-size: 16px;
+				transition: all 0.3s ease;
+				display: block;
+
+				&:hover {
+					color: var(--tj-color-theme-primary);
+					padding-inline-start: 5px;
+				}
+			}
+
+			&.level-2 {
+				// No indent
+			}
+
+			&.level-3 {
+				padding-inline-start: 20px;
+				font-size: 15px;
+			}
+
+			&.level-4 {
+				padding-inline-start: 40px;
+				font-size: 14px;
+				font-style: italic;
+			}
+		}
+	}
+}
+
 /* !END: Blog Details CSS */
