@@ -8,6 +8,7 @@ import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 
 import { constructMetadata } from "@/libs/seo";
+import Contact2 from "@/components/sections/contacts/Contact2";
 
 export const metadata = constructMetadata({
     title: "Contact Us - enfycon",
@@ -26,6 +27,7 @@ export default function ContactUs() {
                     <main>
                        
                         <HeroInner title={"Contact Us"} text={"Contact Us"} />
+                        <Contact2/>
                         <LocationSection />
                         <ContactFormCustom />
                     </main>

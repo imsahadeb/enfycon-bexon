@@ -28,7 +28,7 @@ export default function Services() {
 						<HeroInner title={"Services"} text={"Services"} />
 						<ServicesCategorized />
 						<Contact2 />
-						<Brands2 />
+						
 
 					</main>
 					<Footer2 />

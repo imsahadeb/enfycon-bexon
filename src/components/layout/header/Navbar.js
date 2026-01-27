@@ -246,13 +246,6 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 						</Link>
 					</li>
 
-					{/* Contact Us */}
-					<li className={contactNav?.isActive ? "current-menu-ancestor" : ""}>
-						<Link href={contactNav?.path ? contactNav?.path : "#"}>
-							{contactNav?.name ? contactNav?.name : "Contact"}
-						</Link>
-					</li>
-
 					{/* Blogs */}
 					<li
 						className={`${blogsNav?.isActive ? "current-menu-ancestor" : ""

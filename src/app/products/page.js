@@ -26,7 +26,7 @@ export default function Products() {
                         <HeroInner title={"Products"} text={"Products"} />
                         <ProductsPage />
                         <Contact2 />
-                        <Brands2 />
+                       
                     </main>
                     <Footer2 />
                 </div>

@@ -29,7 +29,7 @@ export default function Industries() {
                         <HeroInner title={"Industries"} text={"Industries"} />
                         <IndustriesPage />
                         <Contact2 />
-                        <Brands2 />
+                      
                      
                     </main>
                     <Footer2 />
