@@ -1,56 +1,23 @@
 "use client";
 import PortfolioCard2 from "@/components/shared/cards/PortfolioCard2";
+import { productsData } from "@/data/productsData";
 
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Products2 = () => {
-	const productsData = [
-		{
-			id: 1,
-			title: "iCognito.ai",
-			img2: "/images/product/icognito.jpg",
-			category: "AI Intelligence",
-			shortDesc: "Advanced AI Intelligence Platform",
-		},
-		{
-			id: 2,
-			title: "iDental.ai",
-			img2: "/images/product/idental.jpg",
-			category: "Healthcare AI",
-			shortDesc: "Dental AI Solutions",
-		},
-		{
-			id: 3,
-			title: "lexGenie.ai",
-			img2: "/images/product/lexgen.jpg",
-			category: "Legal AI",
-			shortDesc: "Legal Intelligence Platform",
-		},
-		{
-			id: 4,
-			title: "quantfin.ai",
-			img2: "/images/product/ifin.jpg",
-			category: "Financial AI",
-			shortDesc: "Quantitative Finance Solutions",
-		},
-		{
-			id: 5,
-			title: "PerformanceEdge.ai",
-			img2: "/images/product/performance.jpg",
-			category: "Performance AI",
-			shortDesc: "Performance Analytics Platform",
-		},
-		{
-			id: 6,
-			title: "iWac.ai",
-			img2: "/images/product/iwac.jpg",
-			category: "Web Analytics",
-			shortDesc: "Web Analytics & Intelligence",
-		},
-	];
+	// Map productsData to PortfolioCard2 format
+	const products = productsData.map((product) => ({
+		id: product.id,
+		title: product.title,
+		img2: product.image,
+		category: product.category,
+		shortDesc: product.tagline,
+		link: `/products/${product.id}`
+	}));
 
-	const products = [...productsData, ...productsData];
+	// Duplicate for slider loop effect
+	const duplicatedProducts = [...products, ...products];
 
 	return (
 		<section className="tj-project-section-2 section-gap">
@@ -110,12 +77,12 @@ const Products2 = () => {
 								modules={[Pagination, Autoplay]}
 								className="project-slider"
 							>
-								{products?.length
-									? products?.map((product, idx) => (
-											<SwiperSlide key={idx}>
-												<PortfolioCard2 portfolio={product} />
-											</SwiperSlide>
-									  ))
+								{duplicatedProducts?.length
+									? duplicatedProducts?.map((product, idx) => (
+										<SwiperSlide key={idx}>
+											<PortfolioCard2 portfolio={product} />
+										</SwiperSlide>
+									))
 									: ""}
 								<div className="swiper-pagination-area"></div>
 							</Swiper>

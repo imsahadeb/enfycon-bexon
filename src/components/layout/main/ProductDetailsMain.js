@@ -1,23 +1,33 @@
-"use client";
-
-import HeroInner from "@/components/sections/hero/HeroInner";
-import ProductDetailsPrimary from "@/components/sections/shop/ProductDetailsPrimary";
-import sliceText from "@/libs/sliceText";
-import { useState } from "react";
+import FullScreenHero from "@/components/sections/hero/FullScreenHero";
+import ProductDetailsPrimary from "@/components/sections/products/ProductDetailsPrimary";
+import { productsData } from "@/data/productsData";
+import getPreviousNextItem from "@/libs/getPreviousNextItem";
 
 const ProductDetailsMain = ({ currentItemId }) => {
-	const [title, setCurrentTitle] = useState("Shop details");
+	const items = productsData;
+	const currentId = currentItemId;
+	const { prevId, nextId, currentItem, isPrevItem, isNextItem } =
+		getPreviousNextItem(items, currentId);
+	const { title, tagline } = currentItem || {};
+
 	return (
 		<div>
-			<HeroInner
-				title={sliceText(title, 31, true)}
-				text={title}
-				breadcrums={[{ name: "Shop", path: "/shop" }]}
-				noNeedTitleAnim={true}
+			<FullScreenHero
+				title={title ? title : "Product Details"}
+				text={tagline || currentItem?.desc || "Product Details"}
+				breadcrums={[{ name: "Products", path: "/products" }]}
+				image={currentItem?.image}
 			/>
 			<ProductDetailsPrimary
-				setCurrentTitle={setCurrentTitle}
-				currentItemId={currentItemId}
+				option={{
+					currentItem,
+					items,
+					currentId,
+					prevId,
+					nextId,
+					isPrevItem,
+					isNextItem,
+				}}
 			/>
 		</div>
 	);

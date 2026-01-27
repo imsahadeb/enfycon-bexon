@@ -2,13 +2,13 @@ import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const IndustryCard = ({ industry, idx }) => {
+const IndustryCard = ({ industry, idx, basePath = "/industries" }) => {
     const { id, title, desc, image, icon } = industry || {};
 
     return (
         <div className="industry-card">
             <div className="industry-image-wrapper">
-                <Link href={`/industries/${id}`}>
+                <Link href={`${basePath}/${id}`}>
                     <Image
                         src={image || "/images/industries/default.png"}
                         alt={title || "Industry"}
@@ -22,10 +22,10 @@ const IndustryCard = ({ industry, idx }) => {
             </div>
             <div className="industry-content">
                 <h3 className="industry-title">
-                    <Link href={`/industries/${id}`}>{title}</Link>
+                    <Link href={`${basePath}/${id}`}>{title}</Link>
                 </h3>
                 <p className="industry-desc">{desc}</p>
-                <Link href={`/industries/${id}`} className="industry-link">
+                <Link href={`${basePath}/${id}`} className="industry-link">
                     Find Out More
                     <i className="tji-arrow-right"></i>
                 </Link>

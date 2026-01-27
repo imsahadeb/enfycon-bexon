@@ -17,13 +17,13 @@ const PortfolioCard2 = ({ portfolio }) => {
 			></div>
 			<div className="project-content">
 				<span className="categories">
-					<Link href={`/portfolios/${id}`}>{category}</Link>
+					<Link href={`/products/${id}`}>{category}</Link>
 				</span>
 				<div className="project-text">
 					<h3 className="title">
-						<Link href={`/portfolios/${id}`}>{title}</Link>
+						<Link href={`/products/${id}`}>{title}</Link>
 					</h3>
-					<Link className="project-btn" href={`/portfolios/${id}`}>
+					<Link className="project-btn" href={`/products/${id}`}>
 						<i className="tji-arrow-right-big"></i>
 					</Link>
 				</div>
