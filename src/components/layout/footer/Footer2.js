@@ -3,9 +3,14 @@ import Link from "next/link";
 import { industriesData } from "@/data/industriesData";
 import { footerData } from "@/data/footerData";
 import { usePathname } from "next/navigation";
+import getNavItems from "@/libs/getNavItems";
 
 const Footer2 = () => {
 	const pathname = usePathname();
+	const navItems = getNavItems();
+	const servicesNav = navItems.find((item) => item.id === 3);
+	const industriesNav = navItems.find((item) => item.id === 4);
+	const productsNav = navItems.find((item) => item.id === 5);
 
 	// Helper to determine if a link is active
 	const isActive = (path) => pathname === path;
@@ -56,13 +61,31 @@ const Footer2 = () => {
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Industries</h5>
 								<ul>
-									{industriesData.map((industry) => (
-										<li key={industry.id}>
+									{industriesNav?.submenu?.map((industry, index) => (
+										<li key={index}>
 											<Link
-												href={`/industries/${industry.id}`}
-												className={isActive(`/industries/${industry.id}`) ? "active" : ""}
+												href={industry.path || "/"}
+												className={isActive(industry.path) ? "active" : ""}
 											>
-												{industry.title}
+												{industry.name}
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+							{/* Col 4: Products */}
+						<div className="col-xl-auto col-lg-auto col-md-6">
+							<div className="footer-widget widget-nav-menu">
+								<h5 className="title">Products</h5>
+								<ul>
+									{productsNav?.submenu?.map((product, index) => (
+										<li key={index}>
+											<Link
+												href={product.path || "/"}
+												className={isActive(product.path) ? "active" : ""}
+											>
+												{product.name}
 											</Link>
 										</li>
 									))}
@@ -75,13 +98,13 @@ const Footer2 = () => {
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Services</h5>
 								<ul>
-									{footerData.services.map((service, index) => (
+									{servicesNav?.submenu?.map((category, index) => (
 										<li key={index}>
 											<Link
-												href={service.link}
-												className={isActive(service.link) ? "active" : ""}
+												href="/services"
+												className={isActive("/services") ? "active" : ""}
 											>
-												{service.label}
+												{category.name}
 											</Link>
 										</li>
 									))}
@@ -89,24 +112,7 @@ const Footer2 = () => {
 							</div>
 						</div>
 
-						{/* Col 4: Products */}
-						<div className="col-xl-auto col-lg-auto col-md-6">
-							<div className="footer-widget widget-nav-menu">
-								<h5 className="title">Products</h5>
-								<ul>
-									{footerData.products.map((product, index) => (
-										<li key={index}>
-											<Link
-												href={product.link}
-												className={isActive(product.link) ? "active" : ""}
-											>
-												{product.label}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</div>
-						</div>
+					
 
 						{/* Col 5: About & Other (Combined to save space if needed, or kept separate) */}
 						<div className="col-xl-auto col-lg-auto col-md-6">
