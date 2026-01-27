@@ -1451,4 +1451,182 @@ export const industriesData = [
             buttonLink: "/contact"
         }
     },
+    {
+        id: "tourism",
+        title: "Tourism",
+        desc: "Reimagining the travel experience with smart booking platforms, immersive virtual tours, and AI-driven personalized itineraries.",
+        image: "/images/industries/tourism/banner2.jpg",
+        overviewTitle: "The Future of Smart Travel",
+        longDesc: [
+            "The tourism industry is rebounding and evolving into a digitally-led ecosystem where experience is everything. Modern travelers demand seamless journeys, from the moment they dream of a trip to the memories they share afterwards. They expect hyper-personalization, instant gratification, and flexible options. To thrive, travel companies must embrace technology that not only streamlines operations but also creates magical, frictionless moments for guests.",
+            "We help travel and hospitality businesses navigate this new terrain. By integrating AI for dynamic pricing and personalized recommendations, and leveraging AR/VR for immersive previews, we transform how the world explores. Our solutions empower you to anticipate traveler needs, optimize inventory in real-time, and build lasting loyalty in a highly competitive global market."
+        ],
+        icon: "fa-regular fa-plane-departure",
+        challenges: [
+            {
+                title: "Seasonal Volatility",
+                desc: "Managing fluctuating demand cycles efficiently is a perennial struggle. Overstaffing during low seasons burns cash, while understaffing during peaks damages reputation. Predictive analytics are needed to balance resources effectively.",
+                icon: "fa-regular fa-calendar-days"
+            },
+            {
+                title: "Hyper-Personalization",
+                desc: "Travelers no longer accept one-size-fits-all packages; they want unique, tailored experiences. aggregating and analyzing data to deliver these authorized offers at scale is a significant technological hurdle.",
+                icon: "fa-regular fa-person-walking-luggage"
+            },
+            {
+                title: "Complex Booking Systems",
+                desc: "Legacy reservation systems are often fragmented and slow, leading to booking errors and frustrated customers. Modernizing these reliable backbones to support real-time, cross-channel booking is essential.",
+                icon: "fa-regular fa-laptop-file"
+            },
+            {
+                title: "Crisis Management",
+                desc: "The industry is highly sensitive to geopolitical and environmental disruptions. Having real-time communication channels and automated rebooking capabilities is vital for managing disruptions smoothly.",
+                icon: "fa-regular fa-tower-broadcast"
+            },
+            {
+                title: "Sustainability Pressures",
+                desc: "There is growing consumer demand for eco-friendly travel options. Tracking and reporting on carbon footprints and sustainable practices require new data management capabilities.",
+                icon: "fa-regular fa-leaf"
+            },
+            {
+                title: "Customer Trust",
+                desc: "In an era of online reviews and influencers, maintaining a pristine digital reputation is critical. Monitoring sentiment and responding to feedback across multiple platforms instantly is a major challenge.",
+                icon: "fa-regular fa-star"
+            }
+        ],
+        benefits: [
+            {
+                title: "Dynamic Pricing",
+                desc: "AI algorithms adjust prices in real-time based on demand, competition, and booking patterns to maximize revenue per available unit.",
+                icon: "fa-regular fa-tags"
+            },
+            {
+                title: "24/7 Virtual Concierge",
+                desc: "AI chatbots handle inquiries, bookings, and service requests instantly at any time of day, enhancing the guest experience while reducing staff workload.",
+                icon: "fa-regular fa-bell-concierge"
+            },
+            {
+                title: "Immersive Previews",
+                desc: "AR and VR technologies allow potential guests to virtually tour hotels or destinations, significantly increasing conversion rates by building confidence.",
+                icon: "fa-regular fa-vr-cardboard"
+            },
+            {
+                title: "Operational Efficiency",
+                desc: "Automate check-ins, inventory management, and staff scheduling to streamline operations and reduce overhead costs.",
+                icon: "fa-regular fa-gears"
+            },
+            {
+                title: "Personalized Marketing",
+                desc: "Target travelers with precision offers based on their past behavior and preferences, increasing the ROI of marketing campaigns.",
+                icon: "fa-regular fa-bullseye"
+            },
+            {
+                title: "Seamless Payments",
+                desc: "Integrated multi-currency payment gateways ensure secure and frictionless transactions for global travelers.",
+                icon: "fa-regular fa-credit-card"
+            }
+        ],
+        useCases: [
+            {
+                title: "Smart Itinerary Planning",
+                desc: "AI generators create day-by-day travel plans based on user interests, budget, and real-time local events.",
+                icon: "fa-regular fa-map-location-dot"
+            },
+            {
+                title: "Sentiment Analysis",
+                desc: "Monitoring social media and review sites to gauge brand perception and identify areas for service improvement immediately.",
+                icon: "fa-regular fa-face-smile-beam"
+            },
+            {
+                title: "Contactless Check-In",
+                desc: "Mobile apps allow guests to bypass the front desk, use digital keys, and order room service, prioritizing safety and convenience.",
+                icon: "fa-regular fa-mobile-screen-button"
+            },
+            {
+                title: "Predictive Maintenance",
+                desc: "IoT sensors in hotels and airlines predict equipment failures before they happen, preventing service disruptions.",
+                icon: "fa-regular fa-screwdriver-wrench"
+            },
+            {
+                title: "Language Translation",
+                desc: "Real-time voice and text translation tools bridge communication gaps between staff and international guests.",
+                icon: "fa-regular fa-language"
+            },
+            {
+                title: "Fraud Prevention",
+                desc: "Analyzing booking patterns to detect and block fraudulent credit card transactions and fake bookings.",
+                icon: "fa-regular fa-shield-halved"
+            }
+        ],
+        process: [
+            {
+                title: "Digital Audit",
+                desc: "Assessing your current digital footprint and operational bottlenecks to identify high-impact opportunities.",
+                icon: "fa-regular fa-magnifying-glass-location"
+            },
+            {
+                title: "Experience Design",
+                desc: "Mapping out the ideal customer journey to ensure every digital touchpoint delights the traveler.",
+                icon: "fa-regular fa-pen-fancy"
+            },
+            {
+                title: "System Integration",
+                desc: "Connecting booking engines, CRMs, and property management systems for a unified data flow.",
+                icon: "fa-regular fa-network-wired"
+            },
+            {
+                title: "Platform Launch",
+                desc: "Deploying your new travel tech solutions with robust testing to ensure stability during peak seasons.",
+                icon: "fa-regular fa-rocket"
+            },
+            {
+                title: "Staff Empowerment",
+                desc: "Training your teams to leverage new tools effectively to enhance their service delivery.",
+                icon: "fa-regular fa-chalkboard-user"
+            },
+            {
+                title: "Growth Optimization",
+                desc: "Analyzing user data post-launch to continually refine offerings and strategies for growth.",
+                icon: "fa-regular fa-chart-line-up"
+            }
+        ],
+        edge: [
+            "Global Connectivity Expertise",
+            "Immersive Tech (AR/VR) Integration",
+            "Real-Time Data Processing",
+            "Customer-Centric Innovation",
+            "Scalable Booking Architectures"
+        ],
+        workingModule: {
+            title: "Smart Travel Ecosystems",
+            desc: "Building interconnected travel platforms that unite airlines, hotels, and local experiences into a seamless journey. We create the digital infrastructure that makes modern travel effortless and memorable.",
+            image: "/images/industries/tourism/banner.jpg"
+        },
+        solutions: [
+            {
+                title: "Booking Engines",
+                desc: "Robust, user-friendly booking platforms that handle complex inventories and dynamic pricing models with ease. maximize direct bookings and reduce dependency on OTAs.",
+                image: "/images/industries/tourism.png",
+                color: "#03A9F4"
+            },
+            {
+                title: "Travel Apps",
+                desc: "Comprehensive mobile companions that manage itineraries, tickets, and bookings in one place. Keep your customers engaged and informed throughout their entire trip.",
+                image: "/images/industries/tourism.png", // Placeholder - check if specific image available or use generic
+                color: "#FF5722"
+            },
+            {
+                title: "Virtual Tours",
+                desc: "High-definition 360-degree virtual experiences that market destinations and properties effectively to remote audiences. Let guests experience the magic before they even book.",
+                image: "/images/industries/tourism.png",
+                color: "#8BC34A"
+            }
+        ],
+        cta: {
+            title: "Redefine the Travel Experience",
+            desc: "Partner with us to build intelligent, immersive, and efficient travel solutions that travelers love.",
+            buttonText: "Contact Us",
+            buttonLink: "/contact"
+        }
+    },
 ];

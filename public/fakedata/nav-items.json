@@ -316,6 +316,12 @@
 				"name": "Supply Chain",
 				"icon": "fa-light fa-boxes-packing",
 				"path": "/industries/supply-chain"
+			},
+			{
+				"id": 9,
+				"name": "Tourism",
+				"icon": "fa-light fa-plane-departure",
+				"path": "/industries/tourism"
 			}
 		]
 	},
