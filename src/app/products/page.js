@@ -7,6 +7,7 @@ import ProductsPage from "@/components/sections/products/ProductsPage";
 import Contact2 from "@/components/sections/contacts/Contact2";
 import Brands2 from "@/components/sections/brands/Brands2";
 import { constructMetadata } from "@/libs/seo";
+import HeaderSpace from "@/components/shared/others/HeaderSpace";
 
 export const metadata = constructMetadata({
     title: "Our Products - AI-Powered Solutions | enfycon",
@@ -23,6 +24,7 @@ export default function Products() {
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main>
+                        <HeaderSpace/>
                         <HeroInner title={"Products"} text={"Products"} />
                         <ProductsPage />
                         <Contact2 />

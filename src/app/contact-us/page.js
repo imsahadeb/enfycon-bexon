@@ -25,7 +25,7 @@ export default function ContactUs() {
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main>
-                      
+                      <HeaderSpace/>
                         <HeroInner title={"Contact Us"} text={"Contact Us"} />
                      
                         <LocationSection />
