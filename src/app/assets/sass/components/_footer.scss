@@ -521,14 +521,15 @@ START: Theme Footer CSS
 					inset-inline-end: 0;
 					transform: translateY(-50%);
 				}
+			
 
 				a {
-					font-size: 16px;
+					font-size: 15px;
 					font-weight: var(--tj-fw-regular);
 					color: var(--tj-color-text-body-2);
 
 					&:hover {
-						color: var(--tj-color-common-white);
+						color: var(--tj-color-theme-primary);
 					}
 				}
 
@@ -743,11 +744,17 @@ START: Theme Footer CSS
 		}
 
 		.tj-copyright-area-2 {
+
 			.copyright-content-area {
+				
 				border-top: none;
 				padding: 25px 0;
 
 				.social-icons {
+					@media #{$md, $sm, $xs} {
+						display: none;
+					}
+					
 					a {
 						color: rgba(255, 255, 255, 0.7);
 						font-size: 16px;
@@ -785,6 +792,7 @@ START: Theme Footer CSS
 
 		@media #{$md, $sm, $xs} {
 			padding-top: 0;
+			
 		}
 	}
 }
@@ -891,8 +899,17 @@ START: Theme Footer CSS
 }
 
 .footer-contact-info {
+	.social-icons{
+		display: none;
+	}
 	max-width: 230px;
 	width: 100%;
+	@media #{$md, $sm, $xs} {
+		.social-icons{
+			margin-left: -5px;
+		}
+	}
+
 
 	.contact-item {
 		margin-bottom: 14px;

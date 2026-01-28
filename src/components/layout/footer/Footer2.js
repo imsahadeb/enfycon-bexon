@@ -50,7 +50,15 @@ const Footer2 = () => {
 											</a>
 										</li>
 									</ul>
+									<div className="social-icons">
+									{footerData.socialLinks.map((social, index) => (
+										<Link key={index} href={social.link} target="_blank" className="mx-2 social-icon-link">
+											<i className={social.icon}></i>
+										</Link>
+									))}
 								</div>
+								</div>
+								
 
 
 							</div>
@@ -155,10 +163,10 @@ const Footer2 = () => {
 								<div className="copyright-menu">
 									<ul className="d-flex list-unstyled m-0 gap-3 align-items-center">
 										<li>
-											<Link href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', hover: 'rgba(29, 60, 235, 1)' }}>Privacy Policy</Link>
+											<Link href="/privacy-policy">Privacy Policy</Link>
 										</li>
 										<li>
-											<Link href="/terms-and-conditions" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', hover: 'rgba(29, 60, 235, 1)' }}>Terms & Condition</Link>
+											<Link href="/terms-and-conditions">Terms & Condition</Link>
 										</li>
 									</ul>
 								</div>
