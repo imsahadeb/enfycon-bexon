@@ -9,12 +9,10 @@ export const footerData = {
         { icon: "fa-brands fa-instagram", link: siteConfig.socialLinks.instagram },
     ],
     services: [
-        { label: "AI & Allied Services", link: "/services/ai-allied-services" },
-        { label: "Consulting & Allied Services", link: "/services/consulting-allied-services" },
-        { label: "Data & Analytics", link: "/services/data-analytics" },
-        { label: "Emerging Technologies", link: "/services/emerging-technologies" },
-        { label: "Engineering, Application & Transformation", link: "/services/engineering-application-transformation" },
-        { label: "IT Facilities, Cybersecurity & Partner Services", link: "/services/it-facilities-cybersecurity-partner-services" },
+        { label: "AI & Allied Services", link: "/services/category/ai-allied-services" },
+        { label: "IT Professional Staffing", link: "/services/category/it-professional-staffing" },
+        { label: "Data & Analytics", link: "/services/category/data-analytics" },
+        { label: "Cybersecurity Services", link: "/services/category/cybersecurity-services" },
     ],
     about: [
         { label: "Overview", link: "/about" },

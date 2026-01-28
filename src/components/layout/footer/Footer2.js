@@ -51,14 +51,14 @@ const Footer2 = () => {
 										</li>
 									</ul>
 									<div className="social-icons">
-									{footerData.socialLinks.map((social, index) => (
-										<Link key={index} href={social.link} target="_blank" className="mx-2 social-icon-link">
-											<i className={social.icon}></i>
-										</Link>
-									))}
+										{footerData.socialLinks.map((social, index) => (
+											<Link key={index} href={social.link} target="_blank" className="mx-2 social-icon-link">
+												<i className={social.icon}></i>
+											</Link>
+										))}
+									</div>
 								</div>
-								</div>
-								
+
 
 
 							</div>
@@ -82,7 +82,7 @@ const Footer2 = () => {
 								</ul>
 							</div>
 						</div>
-							{/* Col 4: Products */}
+						{/* Col 4: Products */}
 						<div className="col-xl-auto col-lg-auto col-md-6">
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Products</h5>
@@ -106,13 +106,13 @@ const Footer2 = () => {
 							<div className="footer-widget widget-nav-menu">
 								<h5 className="title">Services</h5>
 								<ul>
-									{servicesNav?.submenu?.map((category, index) => (
+									{footerData.services.map((service, index) => (
 										<li key={index}>
 											<Link
-												href="/services"
-												className={isActive("/services") ? "active" : ""}
+												href={service.link}
+												className={isActive(service.link) ? "active" : ""}
 											>
-												{category.name}
+												{service.label}
 											</Link>
 										</li>
 									))}
@@ -120,7 +120,7 @@ const Footer2 = () => {
 							</div>
 						</div>
 
-					
+
 
 						{/* Col 5: About & Other (Combined to save space if needed, or kept separate) */}
 						<div className="col-xl-auto col-lg-auto col-md-6">
