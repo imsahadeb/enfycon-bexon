@@ -15,7 +15,7 @@ const Industries1 = () => {
         "supply-chain": { color: "#6366F1", icon: "fa-solid fa-boxes-stacked" }, // Indigo
     };
 
-    const industries = industriesData.map(industry => ({
+    const industries = industriesData.slice(0, 8).map(industry => ({
         ...industry,
         bgColor: industryConfig[industry.id]?.color || "#64748B",
         icon: industryConfig[industry.id]?.icon || "fa-solid fa-briefcase"
