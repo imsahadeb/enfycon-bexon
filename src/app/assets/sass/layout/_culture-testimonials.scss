@@ -251,7 +251,7 @@ $arrow-size: 48px;
 }
 
 .culture-testimonials__arrow--prev {
-    left: -$arrow-size / 2;
+    left: calc(-1 * #{$arrow-size} / 2);
 
     @media (min-width: 768px) {
         left: -24px;
@@ -263,7 +263,7 @@ $arrow-size: 48px;
 }
 
 .culture-testimonials__arrow--next {
-    right: -$arrow-size / 2;
+    right: calc(-1 * #{$arrow-size} / 2);
 
     @media (min-width: 768px) {
         right: -24px;

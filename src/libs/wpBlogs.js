@@ -1,4 +1,6 @@
-const API_URL = "https://enfycon.com/graphql";
+import siteConfig from "@/config/siteConfig";
+
+const API_URL = `${siteConfig.blogApiUrl}graphql`;
 
 async function fetchAPI(query, { variables } = {}) {
   const headers = { "Content-Type": "application/json" };

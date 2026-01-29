@@ -24,6 +24,9 @@ export const siteConfig = {
 
     // Operating Regions
     regions: ["USA", "India", "UAE"],
+
+    // API Configuration
+    blogApiUrl: process.env.NEXT_PUBLIC_WORDPRESS_API_URL || "https://wp.enfyjobs.com/",
 };
 
 export default siteConfig;
