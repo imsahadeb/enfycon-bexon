@@ -23,8 +23,9 @@ async function fetchAPI(query, { variables } = {}) {
   const contentType = res.headers.get("content-type");
   if (!contentType || !contentType.includes("application/json")) {
     const text = await res.text();
-    console.error("API Error: Received non-JSON response", text.slice(0, 100));
-    throw new Error("API returned non-JSON response");
+    console.error(`API Error: Received non-JSON response from ${API_URL}`);
+    console.error("Response Preview:", text.slice(0, 500)); // Log more content to identify the HTML page
+    throw new Error(`API returned non-JSON response from ${API_URL}`);
   }
 
   const json = await res.json();
