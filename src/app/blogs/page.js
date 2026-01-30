@@ -16,8 +16,9 @@ export const metadata = {
 export default async function BlogPage(props) {
 	const searchParams = await props.searchParams;
 	const category = searchParams?.category || null;
+	const author = searchParams?.author || null;
 
-	const data = await getBlogPageData(category);
+	const data = await getBlogPageData(category, author);
 	const latestPost = data?.latestPost;
 	const postsData = data?.posts;
 

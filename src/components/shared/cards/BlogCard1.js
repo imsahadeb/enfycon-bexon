@@ -6,7 +6,7 @@ import Link from "next/link";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 
 const BlogCard1 = ({ blog, idx }) => {
-	const { title, featuredImage, id, category, author, day, month } = blog || {};
+	const { title, featuredImage, id, category, categorySlug, author, day, month } = blog || {};
 	return (
 		<div className="blog-item wow fadeInUp" data-wow-delay={`0.${idx + 1}s`}>
 			<div className="blog-thumb">
@@ -28,13 +28,13 @@ const BlogCard1 = ({ blog, idx }) => {
 			<div className="blog-content">
 				<div className="blog-meta">
 					<span className="categories">
-						<Link href={`/blogs?category=${makePath(category)}`}>
+						<Link href={`/blogs?category=${categorySlug || makePath(category)}`}>
 							{" "}
 							{category}
 						</Link>
 					</span>
 					<span>
-						By <Link href={`/blogs/${id}`}>{author || "enfycon"}</Link>
+						By <Link href={`/blogs?author=${author}`}>{author || "enfycon"}</Link>
 					</span>
 				</div>
 				<h4 className="title">

@@ -22,6 +22,12 @@ const BlogHeroEnterprise = ({ post }) => {
                     <span className={styles.separator}>&gt;</span>
                     <Link href="/blogs">Blogs</Link>
                     <span className={styles.separator}>&gt;</span>
+                    {category && (
+                        <>
+                            <Link href={`/blogs?category=${category}`}>{category}</Link>
+                            <span className={styles.separator}>&gt;</span>
+                        </>
+                    )}
                     {/* Truncate title in breadcrumb if too long */}
                     <span className={styles.current}>
                         {title?.length > 40 ? title.substring(0, 40) + "..." : title}
@@ -48,7 +54,7 @@ const BlogHeroEnterprise = ({ post }) => {
                                 />
                             </div>
                         )}
-                        <Link href="#" className={styles.authorLink}>{author || "Enfycon"}</Link>
+                        <Link href={`/blogs?author=${author}`} className={styles.authorLink}>{author || "Enfycon"}</Link>
                     </div>
 
                     <div className={styles.separator}></div>

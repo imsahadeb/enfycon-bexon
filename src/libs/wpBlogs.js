@@ -42,35 +42,39 @@ async function fetchAPI(query, { variables } = {}) {
 }
 
 export async function getAllBlogs(categoryName = null) {
-  const data = await fetchAPI(
+  const query = categoryName
+    ? `
+    query AllPosts($categoryName: String) {
+      posts(first: 20, where: { orderby: { field: DATE, order: DESC }, categoryName: $categoryName }) {
+        nodes {
+          id
+          title
+          slug
+          date
+          excerpt
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          author {
+            node {
+              name
+            }
+          }
+          categories {
+            nodes {
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
     `
-    query AllPosts($categoryName: String, $hasCategory: Boolean!) {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC }, categoryName: $categoryName }) @include(if: $hasCategory) {
-        nodes {
-          id
-          title
-          slug
-          date
-          excerpt
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-          author {
-            node {
-              name
-            }
-          }
-          categories {
-            nodes {
-              name
-              slug
-            }
-          }
-        }
-      }
-      latestPosts: posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) @skip(if: $hasCategory) {
+    : `
+    query AllPosts {
+      posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
         nodes {
           id
           title
@@ -96,16 +100,13 @@ export async function getAllBlogs(categoryName = null) {
         }
       }
     }
-  `,
-    {
-      variables: {
-        categoryName,
-        hasCategory: !!categoryName
-      },
-    }
-  );
+    `;
 
-  const posts = categoryName ? data?.posts?.nodes : data?.latestPosts?.nodes;
+  const data = await fetchAPI(query, {
+    variables: categoryName ? { categoryName } : {},
+  });
+
+  const posts = data?.posts?.nodes;
 
   return (
     posts?.map((post) => {
@@ -199,106 +200,196 @@ export async function getBlogBySlug(slug) {
 
 
 
-export async function getBlogPageData(category = null) {
+export async function getBlogPageData(category = null, author = null) {
   try {
-    const data = await fetchAPI(
-      `
-      query BlogPageData($categoryName: String, $hasCategory: Boolean!) {
-        latestPosts: posts(first: 1, where: { orderby: { field: DATE, order: DESC } }) {
-          nodes {
-            id
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
+    let query = "";
+    let variables = {};
+
+    if (category) {
+      query = `
+        query BlogPageData($categoryName: String) {
+          latestPosts: posts(first: 1, where: { orderby: { field: DATE, order: DESC } }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+              author {
+                node {
+                  name
+                }
+              }
+              categories {
+                nodes {
+                  name
+                  slug
+                }
               }
             }
-            author {
-              node {
-                name
+          }
+          posts: posts(first: 15, after: null, where: { orderby: { field: DATE, order: DESC }, categoryName: $categoryName }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+              author {
+                node {
+                  name
+                }
+              }
+              categories {
+                nodes {
+                  name
+                  slug
+                }
               }
             }
-            categories {
-              nodes {
-                name
-                slug
-              }
+            pageInfo {
+              hasNextPage
+              endCursor
             }
           }
         }
-        posts: posts(first: 15, after: null, where: { orderby: { field: DATE, order: DESC }, categoryName: $categoryName }) @include(if: $hasCategory) {
-          nodes {
-            id
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
+      `;
+      variables = { categoryName: category };
+    } else if (author) {
+      query = `
+        query BlogPageData($authorName: String) {
+          latestPosts: posts(first: 1, where: { orderby: { field: DATE, order: DESC } }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
               }
-            }
-            author {
-              node {
-                name
+              author {
+                node {
+                  name
+                }
               }
-            }
-            categories {
-              nodes {
-                name
-                slug
+              categories {
+                nodes {
+                  name
+                  slug
+                }
               }
             }
           }
-          pageInfo {
-            hasNextPage
-            endCursor
+          posts: posts(first: 15, after: null, where: { orderby: { field: DATE, order: DESC }, authorName: $authorName }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+              author {
+                node {
+                  name
+                }
+              }
+              categories {
+                nodes {
+                  name
+                  slug
+                }
+              }
+            }
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
           }
         }
-        allPosts: posts(first: 15, after: null, where: { orderby: { field: DATE, order: DESC } }) @skip(if: $hasCategory) {
-          nodes {
-            id
-            title
-            slug
-            date
-            excerpt
-            featuredImage {
-              node {
-                sourceUrl
+      `;
+      variables = { authorName: author };
+    } else {
+      query = `
+        query BlogPageData {
+          latestPosts: posts(first: 1, where: { orderby: { field: DATE, order: DESC } }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
               }
-            }
-            author {
-              node {
-                name
+              author {
+                node {
+                  name
+                }
               }
-            }
-            categories {
-              nodes {
-                name
-                slug
+              categories {
+                nodes {
+                  name
+                  slug
+                }
               }
             }
           }
-          pageInfo {
-            hasNextPage
-            endCursor
+          posts: posts(first: 15, after: null, where: { orderby: { field: DATE, order: DESC } }) {
+            nodes {
+              id
+              title
+              slug
+              date
+              excerpt
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+              author {
+                node {
+                  name
+                }
+              }
+              categories {
+                nodes {
+                  name
+                  slug
+                }
+              }
+            }
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
           }
         }
-      }
-    `,
-      {
-        variables: {
-          categoryName: category,
-          hasCategory: !!category,
-        },
-      }
-    );
+      `;
+    }
+
+    const data = await fetchAPI(query, { variables });
 
     const latestPost = data?.latestPosts?.nodes?.[0] || null;
-    const postsData = category ? data?.posts : data?.allPosts;
+    const postsData = data?.posts;
 
     return {
       latestPost,

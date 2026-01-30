@@ -18,5 +18,6 @@ export const mapPostToCard = (node, selectedCategorySlug = null) => {
         month: date.toLocaleString("en-US", { month: "short" }),
         year: date.getFullYear(),
         category: displayCategory?.name || "Technology",
+        categorySlug: displayCategory?.slug || "technology",
     };
 };
