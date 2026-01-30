@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import BlogCard1 from "@/components/shared/cards/BlogCard1";
 import { mapPostToCard } from "@/libs/mappers";
+import styles from "./blog-feed.module.scss";
 
 /**
  * BlogFeed Component
@@ -135,19 +136,21 @@ const BlogFeed = ({ initialPosts, initialPageInfo, category }) => {
                     <div className="col-lg-12">
                         <div className="tj-pagination-box text-center mt-4">
                             <button
-                                className="tj-btn-primary"
+                                className={styles.loadMoreBtn}
                                 onClick={handleLoadMore}
                                 disabled={isLoadingMore}
-                                style={{
-                                    cursor: isLoadingMore ? "not-allowed" : "pointer",
-                                    opacity: isLoadingMore ? 0.7 : 1
-                                }}
                             >
-                                {isLoadingMore ? "Loading..." : "Load More"}
+                                {isLoadingMore && <span className={styles.spinner}></span>}
+                                <span>{isLoadingMore ? "Loading..." : "Load More"}</span>
+                                {!isLoadingMore && (
+                                    <span className={styles.iconWrapper}>
+                                        <i className="tji-arrow-down"></i>
+                                    </span>
+                                )}
                             </button>
                         </div>
                     </div>
-                </div>
+                </div >
             )}
         </>
     );
