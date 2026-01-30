@@ -20,11 +20,34 @@ const Blogs2 = ({
 		if (loading || hasLoaded) return;
 		setLoading(true);
 		try {
-			const data = await getAllBlogs(categoryName);
-			setBlogs(data.slice(0, 4));
+			let data = [];
+
+			// 1. Try fetching with category if provided
+			if (categoryName) {
+				try {
+					data = await getAllBlogs(categoryName);
+				} catch (e) {
+					console.warn("Blogs2: Failed to fetch by category, trying fallback.", e);
+				}
+			}
+
+			// 2. Fallback to generic blogs if no data found (or fetch failed)
+			// checking for !data or empty array
+			if (!data || data.length === 0) {
+				try {
+					data = await getAllBlogs(null);
+				} catch (e) {
+					console.error("Blogs2: Failed to fetch generic blogs.", e);
+					data = [];
+				}
+			}
+
+			setBlogs(data ? data.slice(0, 4) : []);
 			setHasLoaded(true);
 		} catch (error) {
 			console.error("Error fetching Blogs2 data:", error);
+			setBlogs([]);
+			setHasLoaded(true);
 		} finally {
 			setLoading(false);
 		}
@@ -47,6 +70,10 @@ const Blogs2 = ({
 
 		return () => observer.disconnect();
 	}, [categoryName]);
+
+	if (hasLoaded && (!blogs || blogs.length === 0)) {
+		return null;
+	}
 
 	return (
 		<section className="tj-blog-section-2 section-gap" ref={sectionRef}>

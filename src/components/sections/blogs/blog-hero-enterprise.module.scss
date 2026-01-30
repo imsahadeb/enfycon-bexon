@@ -1,0 +1,194 @@
+.heroSection {
+  position: relative;
+  background-color: var(--tj-color-theme-primary); // Fallback or use existing hero bg
+  padding: 100px 0 80px; // Reduced top padding to move content up
+  color: #fff;
+  overflow: hidden;
+
+  // Use the common hero background if available, or define here
+  // Move background to pseudo-element for independent blurring
+  // background-image: url(/images/bg/service-banner.jpg); 
+  // background-size: cover;
+  // background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); // Overlay for readability
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -10px; // Scale up slightly to avoid blurred edges showing white
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  font-weight: 500;
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .separator {
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  .current {
+    color: #4facfe; // Bluish color for current page
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 30px;
+  max-width: 900px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+
+  .metaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      font-size: 16px;
+      color: #fff; // Or a specific accent color
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+  }
+
+  .separator {
+    height: 16px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .authorLink,
+  .categoryLink {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #fff;
+    }
+  }
+
+  .authorImage {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .categoryLink {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: transparent;
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.zigzagStrip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 3;
+  background: linear-gradient(90deg, #FF9F00, #FF0000, #800080, #0000FF);
+
+  // Zig-zag mask
+  mask-image: linear-gradient(45deg, transparent 33.33%, #000 33.33%, #000 66.67%, transparent 66.67%),
+    linear-gradient(-45deg, transparent 33.33%, #000 33.33%, #000 66.67%, transparent 66.67%);
+  mask-size: 40px 40px; // Adjust size of zig-zags
+  mask-repeat: repeat-x;
+  mask-position: bottom;
+
+  // Alternative Clip Path approach if mask support is an issue (more robust)
+  clip-path: polygon(0 0, 100% 0,
+      100% 100%, 0 100%,
+      0 0,
+      10px 100%, 20px 0, 30px 100%, 40px 0, 50px 100%, 60px 0 // ... this is hard to do dynamically with css alone without repeating
+    );
+  // Reverting to a simpler background pattern approach for true infinite zig-zag
+  clip-path: none;
+  mask: none;
+
+  // Real implementation using background pattern
+  background:
+    linear-gradient(45deg, transparent 75%, #0000FF 75%),
+    linear-gradient(-45deg, transparent 75%, #0000FF 75%),
+    linear-gradient(45deg, transparent 75%, #800080 75%),
+    linear-gradient(-45deg, transparent 75%, #800080 75%),
+    linear-gradient(45deg, transparent 75%, #FF0000 75%),
+    linear-gradient(-45deg, transparent 75%, #FF0000 75%),
+    linear-gradient(45deg, transparent 75%, #FF9F00 75%),
+    linear-gradient(-45deg, transparent 75%, #FF9F00 75%);
+  // This is getting complex to manage colors.
+
+  // Let's go with the Gradient Bar + ZigZag Mask which is the cleanest modern way
+  background: linear-gradient(to right, #FF9F00, #FF0000, #800080, #0000FF);
+  -webkit-mask:
+    conic-gradient(from 135deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 40px 100%;
+}

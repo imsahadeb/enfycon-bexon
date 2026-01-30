@@ -1,5 +1,5 @@
 import BlogDetailsPrimary from "@/components/sections/blogs/BlogDetailsPrimary";
-import HeroInner from "@/components/sections/hero/HeroInner";
+import BlogHeroEnterprise from "@/components/sections/blogs/BlogHeroEnterprise";
 import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import getPreviousNextItem from "@/libs/getPreviousNextItem";
 import { getAllBlogs } from "@/libs/wpBlogs";
@@ -10,12 +10,8 @@ const BlogDetailsMain = async ({ post }) => {
 
 	return (
 		<div>
-			<HeaderSpace/>
-			<HeroInner
-				title={post.title ? post.title : "Blog Details"}
-				text={post.title ? post.title : "Blog Details"}
-				breadcrums={[{ name: "Blogs", path: "/blogs" }]}
-			/>
+			<HeaderSpace />
+			<BlogHeroEnterprise post={post} />
 			<BlogDetailsPrimary post={post} option={option} />
 		</div>
 	);
