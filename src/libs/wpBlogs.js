@@ -187,6 +187,7 @@ export async function getBlogBySlug(slug) {
       month: date.toLocaleString("en-US", { month: "short" }),
       year: date.getFullYear(),
       category: post.categories?.nodes[0]?.name || "Technology",
+      categorySlug: post.categories?.nodes[0]?.slug || "technology",
       tags: post.tags?.nodes?.map(tag => tag.name) || [],
       commentCount: post.commentCount || 0,
       avatar: post.author?.node?.avatar?.url || null,
