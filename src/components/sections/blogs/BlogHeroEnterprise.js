@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./blog-hero-enterprise.module.scss";
 
 const BlogHeroEnterprise = ({ post }) => {
-    const { title, date, day, month, year, readTime, author, category, featuredImage, avatar } = post || {};
+    const { title, date, day, month, year, readTime, author, category, categorySlug, featuredImage, avatar } = post || {};
 
     // Format date if day/month/year provided, else fallback to date string
     const formattedDate = day && month && year ? `${day} ${month}, ${year}` : date;
@@ -24,7 +24,7 @@ const BlogHeroEnterprise = ({ post }) => {
                     <span className={styles.separator}>&gt;</span>
                     {category && (
                         <>
-                            <Link href={`/blogs?category=${category}`}>{category}</Link>
+                            <Link href={`/blogs?category=${categorySlug}`}>{category}</Link>
                             <span className={styles.separator}>&gt;</span>
                         </>
                     )}
@@ -61,7 +61,7 @@ const BlogHeroEnterprise = ({ post }) => {
 
                     {/* Category */}
                     <div className={styles.metaItem}>
-                        <Link href={`/blogs?category=${category}`} className={styles.categoryLink}>{category || "Insights"}</Link>
+                        <Link href={`/blogs?category=${categorySlug}`} className={styles.categoryLink}>{category || "Insights"}</Link>
                     </div>
 
                     <div className={styles.separator}></div>
