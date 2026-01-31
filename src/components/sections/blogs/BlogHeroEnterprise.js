@@ -5,7 +5,7 @@ import styles from "./blog-hero-enterprise.module.scss";
 const BlogHeroEnterprise = ({ post, customTitle, breadcrumbOverride, backgroundOverride }) => {
     // If post is provided, extract data from it.
     // If not, we expect customTitle/breadcrumbOverride for the "listing" mode.
-    const { title: postTitle, date, day, month, year, readTime, author, category, categorySlug, featuredImage, avatar } = post || {};
+    const { title: postTitle, date, day, month, year, readTime, author, authorSlug, category, categorySlug, featuredImage, avatar } = post || {};
 
     const isListingMode = !post;
     const title = customTitle || postTitle;
@@ -72,7 +72,7 @@ const BlogHeroEnterprise = ({ post, customTitle, breadcrumbOverride, backgroundO
                                     />
                                 </div>
                             )}
-                            <Link href={`/blogs?author=${author}`} className={styles.authorLink}>{author || "Enfycon"}</Link>
+                            <Link href={`/blogs?author=${authorSlug || author}`} className={styles.authorLink}>{author || "Enfycon"}</Link>
                         </div>
 
                         <div className={styles.separator}></div>

@@ -61,6 +61,7 @@ export async function getAllBlogs(categoryName = null) {
           author {
             node {
               name
+              slug
             }
           }
           categories {
@@ -90,6 +91,7 @@ export async function getAllBlogs(categoryName = null) {
           author {
             node {
               name
+              slug
             }
           }
           categories {
@@ -118,6 +120,7 @@ export async function getAllBlogs(categoryName = null) {
         title: post.title || "",
         desc: post.excerpt || "",
         author: post.author?.node?.name || "enfycon",
+        authorSlug: post.author?.node?.slug || "enfycon",
         day: date.getDate(),
         month: date.toLocaleString("en-US", { month: "short" }),
         year: date.getFullYear(),
@@ -148,6 +151,7 @@ export async function getBlogBySlug(slug) {
           author {
             node {
               name
+              slug
               avatar {
                 url
               }
@@ -184,6 +188,7 @@ export async function getBlogBySlug(slug) {
       desc: post.excerpt,
       content: post.content,
       author: post.author?.node?.name || "enfycon",
+      authorSlug: post.author?.node?.slug || "enfycon",
       day: date.getDate(),
       month: date.toLocaleString("en-US", { month: "short" }),
       year: date.getFullYear(),
@@ -225,6 +230,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {
@@ -250,6 +256,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {
@@ -285,6 +292,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {
@@ -310,6 +318,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {
@@ -345,6 +354,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {
@@ -370,6 +380,7 @@ export async function getBlogPageData(category = null, author = null) {
               author {
                 node {
                   name
+                  slug
                 }
               }
               categories {

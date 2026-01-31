@@ -14,6 +14,7 @@ export const mapPostToCard = (node, selectedCategorySlug = null) => {
         title: node.title || "",
         desc: node.excerpt || "",
         author: node.author?.node?.name || "enfycon",
+        authorSlug: node.author?.node?.slug || "enfycon",
         day: date.getDate(),
         month: date.toLocaleString("en-US", { month: "short" }),
         year: date.getFullYear(),
