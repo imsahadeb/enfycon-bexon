@@ -104,9 +104,10 @@ export async function generateDynamicMetadata({
     }
 
     return constructMetadata({
-        title: `${item[titleField]} - enfycon`,
-        description: item[descField] || `${resourceName} details for ${item[titleField]}`,
+        title: item.metaTitle || `${item[titleField]} - enfycon`,
+        description: item.metaDescription || item[descField] || `${resourceName} details for ${item[titleField]}`,
         image: item[imageField] || item.img, // Fallback for inconsistent naming
-        keywords: extractKeywords(keywordsText),
+        keywords: item.keywords && item.keywords.length > 0 ? item.keywords : extractKeywords(keywordsText),
+        canonicalUrl: item.canonicalUrl,
     });
 }

@@ -94,7 +94,11 @@ const Faq2 = ({
 								{showCallBox && (
 									<div className="box-area ">
 										<div className="call-box">
-											<h4 className="title">{callBoxText}</h4>
+											<h4 className="title">
+												<Link href="/contact-us" className="text-white text-decoration-none">
+													{callBoxText}
+												</Link>
+											</h4>
 											<span className="call-icon">
 												<i className="tji-phone"></i>
 											</span>

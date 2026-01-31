@@ -7,7 +7,7 @@ import WhyUsSection from "@/components/sections/services/WhyUsSection";
 import Faq2 from "@/components/sections/faq/Faq2";
 import Blogs2 from "@/components/sections/blogs/Blogs2";
 
-const StaffingServiceTemplate = ({ serviceSlug }) => {
+const ModernServiceTemplate = ({ serviceSlug }) => {
     const services = getALlServices();
     const currentItem = services.find((service) => service.id === serviceSlug);
 
@@ -25,37 +25,30 @@ const StaffingServiceTemplate = ({ serviceSlug }) => {
         keyBenefits,
         whyUsItems,
         faqs,
+        category,
         categoryId
     } = currentItem;
 
     const breadcrums = [
         { name: "Services", path: "/services" },
-        { name: "IT Professional Staffing", path: "/services/it-professional-staffing" }
+        { name: category || "Service Category", path: `/services/${categoryId}` }
     ];
 
     // Data Transformations for Component Compatibility
 
     // 1. Challenges -> ApproachSection Items
-    // ApproachSection expects: { title, desc, icon }
-    const approachItems = challenges?.map((challenge, idx) => ({
+    const approachItems = challenges?.map((challenge) => ({
         title: challenge.title,
         desc: challenge.desc,
-        icon: challenge.icon || "fa-light fa-shield-exclamation" // Default icon if missing
+        icon: challenge.icon || "fa-light fa-shield-exclamation"
     }));
 
     // 2. Key Benefits -> ProductUseCaseSection Items (Gradient Cards)
-    // ProductUseCaseSection expects: { title, icon, items: [string, string] }
-    // Data now includes 'icon' and 'items' (bullets) directly
-    const productUseCaseItems = keyBenefits?.map((benefit, idx) => ({
+    const productUseCaseItems = keyBenefits?.map((benefit) => ({
         title: benefit.title,
         icon: benefit.icon || "fa-regular fa-star",
-        items: benefit.items || [benefit.desc] // Fallback for safety
+        items: benefit.items || [benefit.desc]
     }));
-
-    // 3. Why Enfycon -> WhyUsSection Items
-    // WhyUsSection expects: { title, desc, icon }
-    // Data is now an array of objects which perfectly matches the prop requirement.
-    // We already destructured `whyUsItems` from the service object.
 
     const mappedFaqs = faqs?.map(faq => ({
         title: faq.question,
@@ -71,8 +64,8 @@ const StaffingServiceTemplate = ({ serviceSlug }) => {
                 image={img4 || img}
             />
 
-            {/* Overview Section (Matched to Cyber Security Layout) */}
-            <section className="cyber-security-overview section-gap">
+            {/* Overview Section */}
+            <section className="section-gap">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -89,18 +82,18 @@ const StaffingServiceTemplate = ({ serviceSlug }) => {
                 </div>
             </section>
 
-            {/* Challenges Section (Using ApproachSection Layout) */}
+            {/* Challenges Section */}
             {approachItems && (
                 <ApproachSection
                     approach={{
                         title: "Challenges We Solve",
-                        desc: "Navigating the complexities of modern IT staffing requires overcoming significant hurdles.",
+                        desc: "We identify and overcome the critical obstacles standing in the way of your success.",
                         items: approachItems
                     }}
                 />
             )}
 
-            {/* Key Benefits Section (Using ProductUseCaseSection - Gradient Cards) */}
+            {/* Key Benefits Section */}
             {productUseCaseItems && (
                 <ProductUseCaseSection
                     title="Key Benefits"
@@ -113,9 +106,9 @@ const StaffingServiceTemplate = ({ serviceSlug }) => {
 
             {/* Related Blogs Section */}
             <Blogs2
-                categoryName="it-professional-staffing" // Ensure this matches a valid blog category
+                categoryName={categoryId} // Uses the category ID to fetch relevant blogs
                 title="Related Insights"
-                description="Stay updated with the latest trends in technology staffing and recruitment."
+                description={`Stay updated with the latest trends in ${category || 'our services'}.`}
             />
 
             {/* FAQ Section */}
@@ -131,4 +124,4 @@ const StaffingServiceTemplate = ({ serviceSlug }) => {
     );
 };
 
-export default StaffingServiceTemplate;
+export default ModernServiceTemplate;

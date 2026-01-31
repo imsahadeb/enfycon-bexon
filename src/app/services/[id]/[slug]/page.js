@@ -14,14 +14,16 @@ import AIServiceTemplate from "@/components/templates/services/AIServiceTemplate
 import StaffingServiceTemplate from "@/components/templates/services/StaffingServiceTemplate";
 import DefaultServiceTemplate from "@/components/templates/services/DefaultServiceTemplate";
 import CyberSecurityServiceTemplate from "@/components/templates/services/CyberSecurityServiceTemplate";
+import ModernServiceTemplate from "@/components/templates/services/ModernServiceTemplate";
 
 const items = getALlServices();
 
 // Map category IDs to their specific template components
 const TEMPLATE_MAP = {
-    'ai-allied-services': AIServiceTemplate,
+    'ai-allied-services': ModernServiceTemplate,
     'it-professional-staffing': StaffingServiceTemplate,
     'cybersecurity-services': CyberSecurityServiceTemplate,
+    'data-analytics': ModernServiceTemplate,
     // Add more mappings here as needed
 };
 

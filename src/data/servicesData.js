@@ -9,22 +9,86 @@ export const serviceCategories = [
             {
                 id: "ai-agentic-solutions",
                 title: "AI & Agentic Solutions Service",
+                metaTitle: "AI Agentic Solutions & Autonomous Workflows | enfycon",
+                metaDescription: "Deploy autonomous AI agents that reason, act, and automate complex workflows. enfycon specializes in LangChain, AutoGPT, and CrewAI for enterprise-grade agentic systems.",
+                keywords: ["AI Agents", "Agentic AI", "Autonomous Workflows", "LangChain Developers", "AutoGPT Enterprise", "CrewAI Solutions", "Intelligent Automation", "AI Orchestration"],
                 desc: "Leverage autonomous AI agents and intelligent systems to automate complex workflows and enhance operational efficiency.",
+                catchyTitle: "Autonomous Intelligence, Infinite Potential",
                 overview: "enfycon’s AI & Agentic Solutions are at the forefront of the next architectural shift in technology: the move from passive tools to autonomous agents. We specialize in building 'Agentic' systems—AI that doesn't just answer questions but takes actions, reason through multi-step processes, and interacts with other software systems to achieve high-level goals. Whether it's an autonomous customer service agent that can issue refunds and update CRM records, or a DevOps agent that can diagnose and patch cluster failures, our solutions are designed for real-world impact.\n\nOur approach moves beyond simple LLM wrappers. We leverage advanced frameworks like LangChain, AutoGPT, and CrewAI, combined with proprietary orchestration layers, to ensure reliability, safety, and observability. We focus on 'Human-in-the-loop' systems where AI augments human expertise, handling the repetitive, high-volume tasks while escalating complex edge cases. We help organizations transition from experimentation to production-grade agentic workflows that deliver measurable ROI and transformative efficiency.",
                 challenges: [
-                    { title: "Unpredictability & Hallucinations", desc: "Standard AI models can often produce incorrect or inconsistent results (hallucinations). In an autonomous setting, this can lead to cascading errors in business workflows if not managed by robust validation and grounding mechanisms." },
-                    { title: "Security & Permission Governance", desc: "Granting AI agents 'agency' over tools and data introduces significant security risks. Ensuring an agent only accesses what it should, and performs authorized actions, requires a zero-trust architecture and rigorous audit logging." },
-                    { title: "Complex Workflow Orchestration", desc: "Coordinating multiple specialized agents to solve a single complex task requires sophisticated reasoning and memory management. Without proper orchestration, agentic systems can become stuck in loops or fail to converge on a solution." }
+                    { title: "Unpredictability & Hallucinations", desc: "Standard AI models can often produce incorrect or inconsistent results (hallucinations). In an autonomous setting, this can lead to cascading errors in business workflows if not managed by robust validation and grounding mechanisms.", icon: "fa-regular fa-triangle-exclamation" },
+                    { title: "Security & Permission Governance", desc: "Granting AI agents 'agency' over tools and data introduces significant security risks. Ensuring an agent only accesses what it should, and performs authorized actions, requires a zero-trust architecture and rigorous audit logging.", icon: "fa-regular fa-shield-keyhole" },
+                    { title: "Complex Workflow Orchestration", desc: "Coordinating multiple specialized agents to solve a single complex task requires sophisticated reasoning and memory management. Without proper orchestration, agentic systems can become stuck in loops or fail to converge on a solution.", icon: "fa-regular fa-list-tree" }
                 ],
                 keyBenefits: [
-                    { title: "Hyper-Automation of Workflows", desc: "Move beyond RPA. Our agentic systems can handle cognitive tasks, making decisions and executing complex, non-linear workflows that were previously only possible for humans." },
-                    { title: "Reduced Operational Latency", desc: "Autonomous agents work at machine speed, 24/7. Tasks that previously took hours of human review can now be completed in seconds, dramatically increasing throughput and responsiveness." },
-                    { title: "Scalable Intelligent Agency", desc: "Scale your operations without a linear increase in headcount. Deploy dozens or hundreds of specialized agents to handle spikes in volume across support, operations, or data processing." }
+                    {
+                        title: "Hyper-Automation of Workflows",
+                        icon: "fa-regular fa-robot-astromech",
+                        items: [
+                            "Handle complex, non-linear tasks.",
+                            "Automate cognitive decision making.",
+                            "Move beyond rigid RPA constraints."
+                        ]
+                    },
+                    {
+                        title: "Reduced Operational Latency",
+                        icon: "fa-regular fa-stopwatch",
+                        items: [
+                            "Instant 24/7 task execution.",
+                            "Eliminate human processing delays.",
+                            "High-throughput parallel processing."
+                        ]
+                    },
+                    {
+                        title: "Scalable Intelligent Agency",
+                        icon: "fa-regular fa-users-viewfinder",
+                        items: [
+                            "Scale agents, not headcount.",
+                            "Handle spikes in demand instantly.",
+                            "Deploy specialized agent swarms."
+                        ]
+                    },
+                    {
+                        title: "Enterprise-Grade Reliability",
+                        icon: "fa-regular fa-shield-check",
+                        items: [
+                            "Robust guardrails & safety checks.",
+                            "Full audit trails & logging.",
+                            "Human-in-the-loop controls."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Pivotal expertise in leading-edge agentic frameworks and autonomous system architecture.",
-                    "Rigorous safety and guardrail implementation to ensure predictable, secure AI behavior.",
-                    "End-to-end integration capabilities, connecting agents to your existing enterprise stack (APIs, DBs, SaaS)."
+                whyUsItems: [
+                    {
+                        title: "Agentic Framework Mastery",
+                        desc: "Deep expertise in LangChain, CrewAI, and AutoGPT for building robust autonomous systems.",
+                        icon: "fa-regular fa-microchip-ai"
+                    },
+                    {
+                        title: "Safety-First Architecture",
+                        desc: "Rigorous implementation of guardrails and validation layers to prevent AI hallucinations and unauthorized actions.",
+                        icon: "fa-regular fa-shield-slash"
+                    },
+                    {
+                        title: "Seamless Integration",
+                        desc: "We connect agents to your existing APIs, databases, and SaaS tools for true end-to-end automation.",
+                        icon: "fa-regular fa-puzzle-piece"
+                    },
+                    {
+                        title: "Custom LLM Orchestration",
+                        desc: "Proprietary orchestration layers that manage context, memory, and tool use for complex multi-step reasoning.",
+                        icon: "fa-regular fa-brain-circuit"
+                    },
+                    {
+                        title: "Production-Ready focus",
+                        desc: "We move beyond prototypes to build scalable, observable, and maintainable agent systems.",
+                        icon: "fa-regular fa-server"
+                    },
+                    {
+                        title: "Human-Centric Design",
+                        desc: "Systems designed to augment and collaborate with human teams, not just replace them.",
+                        icon: "fa-regular fa-users"
+                    }
                 ],
                 faqs: [
                     { question: "What is an 'Agentic' solution compared to standard AI?", answer: "Standard AI typically provides information based on a prompt. Agentic AI can take actions—it uses 'tools' (APIs, databases, software) to execute multi-step tasks autonomously." },
@@ -39,22 +103,86 @@ export const serviceCategories = [
             {
                 id: "ai-first-platforms",
                 title: "AI-First Platforms Engineering",
+                metaTitle: "AI-First Platform Engineering & MLOps | enfycon",
+                metaDescription: "Build scalable, AI-native platforms with enfycon. We engineer systems with machine learning at the core, featuring automated MLOps, robust data pipelines, and real-time inference.",
+                keywords: ["AI Platform Engineering", "MLOps Services", "AI-Native Architecture", "Scalable Inference", "Machine Learning Platforms", "Cloud AI Solutions", "Data Pipelines"],
                 desc: "Design and build AI-native platforms that integrate machine learning capabilities at their core for scalable intelligent solutions.",
+                catchyTitle: "Native Intelligence, Scaled Performance",
                 overview: "In the modern era, AI cannot be an afterthought; it must be the foundation. Our AI-First Platforms Engineering service is dedicated to building robust, scalable software architectures where machine learning is woven into the very fabric of the application. We move away from 'adding a chatbot' to building systems that learn, adapt, and optimize themselves based on real-time data flow. From predictive maintenance systems in manufacturing to high-frequency algorithmic trading platforms, we build the infrastructure that powers intelligence at scale.\n\nWe specialize in MLOps (Machine Learning Operations), ensuring that your models aren't just accurate in a notebook, but are reliable in production. Our platforms include automated data pipelines, model versioning, A/B testing frameworks, and comprehensive monitoring for model drift. We leverage cloud-native technologies (AWS SageMaker, Google Vertex AI, Azure ML) alongside custom-built components to create platforms that are resilient, performant, and future-proof. Our engineering philosophy prioritizes data privacy, ethical AI principles, and high-availability architecture.",
                 challenges: [
-                    { title: "Technical Debt & Legacy Integration", desc: "Retrofitting AI into monolithic legacy systems is notoriously difficult. Siloed data, lack of API connectivity, and incompatible tech stacks often create significant roadblocks for AI adoption." },
-                    { title: "Scalability of Inference", desc: "Serving AI models at scale to thousands of concurrent users requires immense compute power and low-latency architectural design. Managing the cost and performance of high-volume inference is a major engineering hurdle." },
-                    { title: "Model Decay & Drift", desc: "AI models are not 'set and forget'. Changes in real-world data can cause performance to degrade over time (drift). Without rigorous monitoring and automated retraining, AI systems can quickly become liabilities." }
+                    { title: "Technical Debt & Legacy Integration", desc: "Retrofitting AI into monolithic legacy systems is notoriously difficult. Siloed data, lack of API connectivity, and incompatible tech stacks often create significant roadblocks for AI adoption.", icon: "fa-regular fa-server-slash" },
+                    { title: "Scalability of Inference", desc: "Serving AI models at scale to thousands of concurrent users requires immense compute power and low-latency architectural design. Managing the cost and performance of high-volume inference is a major engineering hurdle.", icon: "fa-regular fa-gauge-max" },
+                    { title: "Model Decay & Drift", desc: "AI models are not 'set and forget'. Changes in real-world data can cause performance to degrade over time (drift). Without rigorous monitoring and automated retraining, AI systems can quickly become liabilities.", icon: "fa-regular fa-wave-pulse" }
                 ],
                 keyBenefits: [
-                    { title: "Seamless Intelligence Integration", desc: "Build applications where intelligence is a core feature, not an add-on. Enable features like predictive search, automated classification, and proactive insights natively within your UI." },
-                    { title: "End-to-End MLOps Maturity", desc: "Transition from manual model deployment to fully automated CI/CD for machine learning. Reduce the time to get new models from research into production from months to days." },
-                    { title: "Optimized Compute Costs", desc: "Our architects specialize in cost-effective AI scaling, utilizing serverless inference, spot instances, and optimized model quantization to deliver high performance at a lower price point." }
+                    {
+                        title: "Seamless Intelligence Integration",
+                        icon: "fa-regular fa-brain-arrow-curve-left",
+                        items: [
+                            "Native predictive features.",
+                            "Real-time personalization layer.",
+                            "Automated decision loops."
+                        ]
+                    },
+                    {
+                        title: "End-to-End MLOps Maturity",
+                        icon: "fa-regular fa-conveyor-belt-arm",
+                        items: [
+                            "Automated model retraining.",
+                            "One-click deployment pipelines.",
+                            "Full version control for data."
+                        ]
+                    },
+                    {
+                        title: "Optimized Compute Costs",
+                        icon: "fa-regular fa-chart-network",
+                        items: [
+                            "Serverless inference scaling.",
+                            "Spot instance utilization.",
+                            "Model quantization support."
+                        ]
+                    },
+                    {
+                        title: "High-Availability Architecture",
+                        icon: "fa-regular fa-server",
+                        items: [
+                            "99.9% uptime SLAs.",
+                            "Geo-redundant deployment.",
+                            "Failover & recovery automation."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Deep engineering expertise in building high-concurrency, distributed systems for AI workloads.",
-                    "Proven track record in setting up enterprise-grade MLOps pipelines for Fortune 500 clients.",
-                    "Cloud-agnostic approach, selecting the best-of-breed tools for your specific infrastructure needs."
+                whyUsItems: [
+                    {
+                        title: "MLOps Engineering Elite",
+                        desc: "We don't just build models; we build the factories that run them. Expert integration of CI/CD with ML workflows.",
+                        icon: "fa-regular fa-cogs"
+                    },
+                    {
+                        title: "Cloud-Native Architects",
+                        desc: "Deep expertise in AWS SageMaker, Google Vertex AI, and Azure ML for best-of-breed infrastructure.",
+                        icon: "fa-regular fa-cloud"
+                    },
+                    {
+                        title: "High-Performance Compute",
+                        desc: "Specialists in optimizing GPU/TPU workloads to get maximum performance per dollar.",
+                        icon: "fa-regular fa-microchip"
+                    },
+                    {
+                        title: "Scalability First",
+                        desc: "Architectures designed from day one to handle millions of requests and petabytes of data.",
+                        icon: "fa-regular fa-arrows-maximize"
+                    },
+                    {
+                        title: "Security & Governance",
+                        desc: "Enterprise-grade security, RBAC, and data lineage tracking built into the platform core.",
+                        icon: "fa-regular fa-lock-keyhole"
+                    },
+                    {
+                        title: "Full-Stack AI Integration",
+                        desc: "Seamless end-to-end development from the model layer to the frontend UI/UX.",
+                        icon: "fa-regular fa-layer-group"
+                    }
                 ],
                 faqs: [
                     { question: "Can you help us migrate our existing platform to an AI-first architecture?", answer: "Yes, we specialize in modernization strategies that incrementally introduce AI capabilities while maintaining operational stability and data integrity." },
@@ -69,22 +197,86 @@ export const serviceCategories = [
             {
                 id: "personalized-customer-engagement",
                 title: "Personalized Customer Engagement",
+                metaTitle: "AI Personalization Service & Customer Engagement | enfycon",
+                metaDescription: "Drive loyalty and conversion with AI-driven personalization. enfycon builds intelligent engagement systems that adapt to customer intent in real-time.",
+                keywords: ["AI Personalization", "Customer Engagement AI", "Real-Time Personalization", "Customer Journey Orchestration", "Predictive Customer Analytics", "AI Chatbots", "Personalized Marketing"],
                 desc: "Create personalized customer experiences using AI-driven insights and intelligent engagement strategies.",
+                catchyTitle: "The Segment of One, At Scale",
                 overview: "Generic marketing and customer service are things of the past. enfycon’s Personalized Customer Engagement service leverages advanced AI to understand the 'Segment of One'. We help brands analyze vast amounts of behavioral, transactional, and demographic data to deliver hyper-personalized experiences across every touchpoint—from web and mobile to email and voice agents. By predicting customer intent in real-time, we enable your business to reach the right customer, with the right message, at the exact moment it matters most.\n\nOur solutions go beyond simple recommendation engines. We build dynamic journey orchestration systems that adapt based on every click, purchase, or support interaction. We utilize Large Language Models to power empathetic, context-aware chatbots and virtual assistants that handle complex queries with human-like nuance. By integrating AI-driven sentiment analysis, we help you identify at-risk customers before they churn, allowing for proactive intervention and loyalty building. Our goal is to transform every customer interaction into a value-driven relationship, increasing conversion rates and lifetime value.",
                 challenges: [
-                    { title: "Fragmented Customer Data", desc: "Data is often trapped in disconnected silos—CRM, web analytics, social media, and POS systems. Creating a unified, 360-degree view of the customer is the primary challenge for personalization." },
-                    { title: "Real-Time Processing at Scale", desc: "Personalization is most effective when it's instantaneous. Analyzing gigabytes of streaming data and serving a personalized offer in under 100ms requires high-performance data architecture." },
-                    { title: "Privacy & Ethical Concerns", desc: "With increasing regulations like GDPR and CCPA, businesses must balance personalization with privacy. Misusing customer data can lead to legal penalties and catastrophic loss of brand trust." }
+                    { title: "Fragmented Customer Data", desc: "Data is often trapped in disconnected silos—CRM, web analytics, social media, and POS systems. Creating a unified, 360-degree view of the customer is the primary challenge for personalization.", icon: "fa-regular fa-database" },
+                    { title: "Real-Time Processing at Scale", desc: "Personalization is most effective when it's instantaneous. Analyzing gigabytes of streaming data and serving a personalized offer in under 100ms requires high-performance data architecture.", icon: "fa-regular fa-bolt" },
+                    { title: "Privacy & Ethical Concerns", desc: "With increasing regulations like GDPR and CCPA, businesses must balance personalization with privacy. Misusing customer data can lead to legal penalties and catastrophic loss of brand trust.", icon: "fa-regular fa-user-shield" }
                 ],
                 keyBenefits: [
-                    { title: "Dramatically Higher Conversion", desc: "Relevant offers and content drive significantly higher engagement. Brands using our AI personalization see an average 20-30% uplift in conversion rates and average order value." },
-                    { title: "Reduced Customer Churn", desc: "Identify early signals of dissatisfaction and trigger automated, personalized retention campaigns. Proactive engagement keeps your customers loyal and reduces acquisition costs." },
-                    { title: "Empathetic, Scalable Support", desc: "Our AI-driven assistants handle up to 80% of routine queries with high satisfaction, freeing your human agents to focus on complex, high-value customer relationships." }
+                    {
+                        title: "Dramatically Higher Conversion",
+                        icon: "fa-regular fa-arrow-trend-up",
+                        items: [
+                            "20-30% uplift in sales.",
+                            "Higher average order value.",
+                            "Reduced cart abandonment."
+                        ]
+                    },
+                    {
+                        title: "Reduced Customer Churn",
+                        icon: "fa-regular fa-user-minus",
+                        items: [
+                            "Early churn detection.",
+                            "Automated retention offers.",
+                            "Proactive loyalty outreach."
+                        ]
+                    },
+                    {
+                        title: "Empathetic, Scalable Support",
+                        icon: "fa-regular fa-headset",
+                        items: [
+                            "80% automated resolution.",
+                            "24/7 instant support.",
+                            "Context-aware interactions."
+                        ]
+                    },
+                    {
+                        title: "Unified Customer View",
+                        icon: "fa-regular fa-id-card-clip",
+                        items: [
+                            "360-degree profile sync.",
+                            "Cross-channel consistency.",
+                            "Real-time behavioral tracking."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Expertise in integrating AI engagement tools with leading CRMs (Salesforce, HubSpot, Adobe).",
-                    "Advanced natural language processing (NLP) capabilities for sentiment and intent analysis.",
-                    "Focus on 'Privacy-by-Design' to ensure all personalization strategies are fully compliant and secure."
+                whyUsItems: [
+                    {
+                        title: "Full-Stack CRM Integration",
+                        desc: "Seamless connectivity with Salesforce, HubSpot, Adobe, and custom CDPs for unified data flow.",
+                        icon: "fa-regular fa-link"
+                    },
+                    {
+                        title: "Advanced NLP Engines",
+                        desc: "We use state-of-the-art Natural Language Processing to understand sentiment, intent, and nuance.",
+                        icon: "fa-regular fa-comments"
+                    },
+                    {
+                        title: "Privacy-First Engineering",
+                        desc: "GDPR/CCPA compliant architectures that personalize without compromising user trust or data security.",
+                        icon: "fa-regular fa-fingerprint"
+                    },
+                    {
+                        title: "Real-Time Decisioning",
+                        desc: "High-performance inference engines that deliver personalized content in milliseconds.",
+                        icon: "fa-regular fa-stopwatch"
+                    },
+                    {
+                        title: "Omnichannel Orchestration",
+                        desc: "Consistent experiences across web, mobile, email, SMS, and physical touchpoints.",
+                        icon: "fa-regular fa-share-nodes"
+                    },
+                    {
+                        title: "ROI-Driven Strategy",
+                        desc: "We focus on measurable outcomes like CLV, CAC reduction, and Net Promoter Score (NPS).",
+                        icon: "fa-regular fa-chart-line-up"
+                    }
                 ],
                 faqs: [
                     { question: "How is this different from a standard recommendation engine?", answer: "We provide full-journey orchestration, not just product suggestions. Our systems adapt in real-time across multiple channels based on intent, sentiment, and context." },
@@ -107,25 +299,86 @@ export const serviceCategories = [
             {
                 id: "us-it-staffing",
                 title: "Technology Hiring Solutions",
+                metaTitle: "US Technology Hiring Solutions & IT Staffing | enfycon",
+                metaDescription: "Connect with top US tech talent in 24-48 hours. Our Technology Hiring Solutions bridge the skills gap with 50,000+ pre-screened professionals in AI, Cloud, and Engineering.",
+                keywords: ["US IT Staffing", "Technology Hiring", "Tech Recruiters", "IT Staffing Agency", "Software Engineers", "Cloud Architects", "AI Talent", "Contract to Hire", "Technical Staffing", "Silicon Valley Recruiter"],
                 desc: "In the fast-paced US technology landscape, finding the right talent is critical to staying ahead. Our Technology Hiring Solutions are designed to bridge the gap between your ambitious projects and the specialized skills required to execute them.",
+                catchyTitle: "Strategic Talent for Digital Excellence",
                 overview: "In today's hyper-competitive US technology landscape, the difference between market leadership and obsolescence often boils down to one critical factor: talent. Our Technology Hiring Solutions service is not just about filling vacancies; it's about strategically augmenting your workforce with high-caliber professionals who can drive innovation. We understand that every project has unique nuances—whether it's legacy modernization, cloud-native development, or AI integration. That’s why we offer a bespoke staffing approach.\n\nFrom Silicon Valley startups to Fortune 500 enterprises on Wall Street, we tap into a hidden market of passive candidates who aren't just looking for a job, but for the right challenge. Our rigorous screening process, which includes technical coding challenges, architectural design interviews, and cultural fit assessments, ensures that every candidate we present is ready to contribute from day one. We handle the complexities of recruitment so you can focus on building world-class products. We specialize in rapid scaling for critical milestones, offering flexible models that adapt to your budget and timeline. Our deep industry knowledge allows us to anticipate market shifts, ensuring your team is equipped with future-proof skills.",
                 challenges: [
-                    { title: "Talent Shortage & Skills Gap", desc: "The demand for specialized skills in AI, Machine Learning, and Cybersecurity far outstrips supply. Organizations often struggle to find candidates who possess both the theoretical knowledge and the practical, production-grade experience required for complex enterprise environments." },
-                    { title: "High Turnover & Retention", desc: "In a candidate-driven market, retaining top talent is a constant battle. High attrition rates disrupt project continuity, lead to significant knowledge loss, and inflate overall recruitment costs, stalling critical roadmap deliverables." },
-                    { title: "Prolonged Time-to-Hire", desc: "Traditional recruitment cycles can take months, delaying project kickoffs and missing market windows. The administrative burden of screening, interviewing, and negotiating with dozens of candidates diverts valuable engineering leadership time." },
-                    { title: "Regulatory & Compliance Risks", desc: "Navigating the complex web of US labor laws, visa regulations (H1B, OPT, etc.), and tax compliance across different states can be a legal minefield. Non-compliance can lead to severe penalties and reputational damage." }
+                    { title: "Talent Shortage & Skills Gap", desc: "The demand for specialized skills in AI, Machine Learning, and Cybersecurity far outstrips supply. Organizations often struggle to find candidates who possess both the theoretical knowledge and the practical, production-grade experience required for complex enterprise environments.", icon: "fa-regular fa-users-slash" },
+                    { title: "High Turnover & Retention", desc: "In a candidate-driven market, retaining top talent is a constant battle. High attrition rates disrupt project continuity, lead to significant knowledge loss, and inflate overall recruitment costs, stalling critical roadmap deliverables.", icon: "fa-regular fa-rotate-right" },
+                    { title: "Prolonged Time-to-Hire", desc: "Traditional recruitment cycles can take months, delaying project kickoffs and missing market windows. The administrative burden of screening, interviewing, and negotiating with dozens of candidates diverts valuable engineering leadership time.", icon: "fa-regular fa-clock" }
                 ],
                 keyBenefits: [
-                    { title: "Rapid Deployment & Speed", desc: "Time is money. We leverage our pre-vetted pool of 50,000+ professionals to present qualified candidates within 24-48 hours, drastically reducing your time-to-hire and ensuring your projects stay on schedule." },
-                    { title: "Niche Technical Expertise", desc: "We don't just find 'developers'. We find specialists. Whether you need a Rust expert for systems programming, a Kubernetes architect for cloud infrastructure, or a Data Scientist for predictive modeling, we have the niche talent you need." },
-                    { title: "Cost Efficiency & Flexibility", desc: "Significantly reduce the overheads associated with internal recruitment teams, advertising, and onboarding. Our flexible engagement models allow you to scale your team up or down based on project demands, converting fixed costs into variable ones." },
-                    { title: "Risk Mitigation", desc: "We assume the burden of employment liability, verified background checks, and legal compliance. Our contract-to-hire options allow you to evaluate a candidate's performance in real-time before making a long-term commitment." }
+                    {
+                        title: "Rapid Deployment & Speed",
+                        icon: "fa-regular fa-rocket",
+                        items: [
+                            "Candidates in 24-48 hours.",
+                            "Pre-vetted pool of 50k+ pros.",
+                            "Streamlined interview process."
+                        ]
+                    },
+                    {
+                        title: "Niche Technical Expertise",
+                        icon: "fa-regular fa-code-branch",
+                        items: [
+                            "Specialists, not generalists.",
+                            "Expertise in AI, Cloud, & Rust.",
+                            "Hard-to-find skill sets."
+                        ]
+                    },
+                    {
+                        title: "Cost Efficiency & Flexibility",
+                        icon: "fa-regular fa-chart-line",
+                        items: [
+                            "Scale teams up or down.",
+                            "Convert fixed costs to variable.",
+                            "Reduce recruitment overheads."
+                        ]
+                    },
+                    {
+                        title: "Risk Mitigation",
+                        icon: "fa-regular fa-shield-check",
+                        items: [
+                            "Full compliance management.",
+                            "Verified background checks.",
+                            "Contract-to-hire options."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Extensive proprietary network of 50,000+ pre-screened technology hiring professionals across all major tech hubs.",
-                    "Dedicated account managers who act as your strategic talent partners, understanding your specific technical and cultural needs.",
-                    "Industry-leading 98% placement success rate with a strong focus on long-term candidate retention.",
-                    "A compliance-first approach ensuring absolutely risk-free hiring and seamless onboarding experiences."
+                whyUsItems: [
+                    {
+                        title: "Proprietary Talent Network",
+                        desc: "Access to a hidden market of 50,000+ pre-screened professionals across major tech hubs.",
+                        icon: "fa-regular fa-network-wired"
+                    },
+                    {
+                        title: "Strategic Partnership",
+                        desc: "Dedicated account managers who understand your culture and technical needs, acting as partners.",
+                        icon: "fa-regular fa-handshake"
+                    },
+                    {
+                        title: "98% Placement Success",
+                        desc: "Industry-leading success rate with a strong focus on long-term retention and stability.",
+                        icon: "fa-regular fa-star"
+                    },
+                    {
+                        title: "Compliance First Focus",
+                        desc: "Zero-risk hiring with full handling of legal, tax, and visa compliance for every candidate.",
+                        icon: "fa-regular fa-file-contract"
+                    },
+                    {
+                        title: "Technical Vetting Depth",
+                        desc: "Rigorous coding challenges and architectural interviews conducted by extensive domain experts.",
+                        icon: "fa-regular fa-code"
+                    },
+                    {
+                        title: "Rapid Turnaround Time",
+                        desc: "Speed is our currency. We deliver qualified shortlists in 24-48 hours to keep you moving.",
+                        icon: "fa-regular fa-stopwatch"
+                    }
                 ],
                 faqs: [
                     { question: "How quickly can you provide qualified candidates?", answer: "We typically present a shortlist of fully vetted, qualified candidates within 24-48 hours of receiving your detailed job requirements." },
@@ -140,22 +393,86 @@ export const serviceCategories = [
             {
                 id: "domestic-it-staffing",
                 title: "Domestic IT Staffing",
+                metaTitle: "Domestic IT Staffing Services | Local Tech Talent | enfycon",
+                metaDescription: "Build high-performing local teams with enfycon's Domestic IT Staffing. We specialize in finding cultural-fit candidates with niche skills within your region.",
+                keywords: ["Domestic IT Staffing", "Local Tech Talent", "Regional IT Recruitment", "On-site Developers", "Hybrid Workforce", "Staffing Agency Near Me", "Local IT Consultants"],
                 desc: "Empower your local operations with our robust Domestic IT Staffing services. We understand the nuances of the local market and provide tailored recruitment strategies to find the best talent within your region.",
+                catchyTitle: "Homegrown Talent, World-Class Impact",
                 overview: "Our Domestic IT Staffing solutions are laser-focused on connecting you with the absolute best local talent available in your region. We distinctively believe in the power of proximity and cultural alignment to drive team cohesion. By leveraging our deep, ingrained understanding of the domestic market dynamics, we help you build teams that are not just technically sound, but are communicative, collaborative, and committed to your long-term vision.\n\nLocal hiring brings its own set of advantages—from easier collaboration in hybrid work models to better alignment with local business hours and cultural nuances. We maintain active relationships with local tech communities, universities, and professional groups, giving us access to a rich pipeline of candidates who are often not visible on public job boards. Whether you need to build a core in-house team or staff a temporary project with local consultants, our domestic staffing services ensure you get the right people who fit your ecosystem perfectly.",
                 challenges: [
-                    { title: "Fierce Local Competition", desc: "You are often competing for the same limited talent pool as major local players and tech giants. Standing out as an employer of choice and attracting the best local minds requires a strategic approach." },
-                    { title: "Specific Regional Skill Gaps", desc: "Finding specific, high-demand skills within a limited geographical area can be incredibly challenging. Some regions may have a surplus of certain skills while facing a severe drought of others." },
-                    { title: "Wage Inflation & Expectations", desc: "Managing rising salary expectations in local markets is difficult. Candidates often have multiple offers, driving up costs. Navigating these negotiations requires deep market intelligence." }
+                    { title: "Fierce Local Competition", desc: "You are often competing for the same limited talent pool as major local players and tech giants. Standing out as an employer of choice and attracting the best local minds requires a strategic approach.", icon: "fa-regular fa-trophy" },
+                    { title: "Specific Regional Skill Gaps", desc: "Finding specific, high-demand skills within a limited geographical area can be incredibly challenging. Some regions may have a surplus of certain skills while facing a severe drought of others.", icon: "fa-regular fa-map-location-dot" },
+                    { title: "Wage Inflation & Expectations", desc: "Managing rising salary expectations in local markets is difficult. Candidates often have multiple offers, driving up costs. Navigating these negotiations requires deep market intelligence.", icon: "fa-regular fa-money-bill-trend-up" }
                 ],
                 keyBenefits: [
-                    { title: "Deep Local Market Insight", desc: "We provide you with real-time intelligence on regional talent pools, salary benchmarks, and competitor hiring trends, enabling you to make informed offers." },
-                    { title: "Cultural & Operational Fit", desc: "All candidates are screened not just for code, but for character. We ensure they align with your local work culture, communication style, and business values." },
-                    { title: "Seamless On-site Availability", desc: "Local candidates facilitate easier coordination for on-site meetings, hybrid work arrangements, and team-building activities, fostering stronger team unity." }
+                    {
+                        title: "Deep Local Market Insight",
+                        icon: "fa-regular fa-magnifying-glass-location",
+                        items: [
+                            "Real-time salary benchmarks.",
+                            "Regional talent heatmaps.",
+                            "Competitor hiring intelligence."
+                        ]
+                    },
+                    {
+                        title: "Cultural & Operational Fit",
+                        icon: "fa-regular fa-users-rays",
+                        items: [
+                            "Aligned communication styles.",
+                            "Shared business values.",
+                            "Higher retention rates."
+                        ]
+                    },
+                    {
+                        title: "Seamless On-site Availability",
+                        icon: "fa-regular fa-building-user",
+                        items: [
+                            "Easy hybrid work setup.",
+                            "Face-to-face collaboration.",
+                            "Instant time-zone alignment."
+                        ]
+                    },
+                    {
+                        title: "Regulatory & Legal Safety",
+                        icon: "fa-regular fa-gavel",
+                        items: [
+                            "Full labor law compliance.",
+                            "Zero liability risks.",
+                            "Managed payroll & insurance."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Strong regional presence with deep ties to local tech communities and unparalleled engagement.",
-                    "Tailored recruitment strategies that are specifically designed for the nuances of your local markets.",
-                    "Fast turnaround times for local placements, ensuring your local operations never skip a beat."
+                whyUsItems: [
+                    {
+                        title: "Local Tech Community",
+                        desc: "Deep ties to regional tech hubs, universities, and user groups for exclusive talent access.",
+                        icon: "fa-regular fa-city"
+                    },
+                    {
+                        title: "Tailored Regional Strategy",
+                        desc: "Recruitment plans designed specifically for the unique economic and skills ladscape of your region.",
+                        icon: "fa-regular fa-bullseye-arrow"
+                    },
+                    {
+                        title: "Rapid Local Placement",
+                        desc: "Fast turnaround times for on-site roles, ensuring your operations never skip a beat.",
+                        icon: "fa-regular fa-bolt"
+                    },
+                    {
+                        title: "Compliance Mastery",
+                        desc: "Full handling of state-specific labor laws, taxes, and insurance requirements.",
+                        icon: "fa-regular fa-scale-balanced"
+                    },
+                    {
+                        title: "On-Site Support",
+                        desc: "Ability to facilitate in-person interviews and onboarding for a smoother candidate experience.",
+                        icon: "fa-regular fa-handshake-simple"
+                    },
+                    {
+                        title: "Retention Focused",
+                        desc: "We screen for long-term intent, ensuring candidates are committed to your local mission.",
+                        icon: "fa-regular fa-anchor"
+                    }
                 ],
                 faqs: [
                     { question: "Do you recruit for remote roles as well?", answer: "Yes, while our focus here is domestic, we support remote, hybrid, and on-site placements depending on your specific operational needs." },
@@ -170,22 +487,86 @@ export const serviceCategories = [
             {
                 id: "offshore-dedicated-teams",
                 title: "Offshore Dedicated Teams",
+                metaTitle: "Offshore Dedicated Development Teams | Remote Engineering | enfycon",
+                metaDescription: "Scale your engineering capacity with enfycon's Offshore Dedicated Teams. Access top global talent, reduce costs by 60%, and accelerate delivery with 24/7 productivity.",
+                keywords: ["Offshore Development Center", "Dedicated Remote Teams", "Offshore Software Development", "Remote Engineering Team", "Global Talent Pool", "Cost Effective Staffing", "ODC Services"],
                 desc: "Accelerate your product development and optimize costs with enfycon's Offshore Dedicated Teams. We build and manage remote teams that function as a seamless extension of your in-house engineering department.",
+                catchyTitle: "Borderless Innovation, Infinite Scale",
                 overview: "enfycon’s Offshore Dedicated Teams service is a strategic game-changer that allows you to scale your engineering capabilities rapidly and cost-effectively without compromising on quality. We set up exclusive, high-performance teams in our state-of-the-art global delivery centers that work solely for you. Unlike traditional outsourcing, these are your teams—they adopt your tools, your methodologies, and your culture.\n\nYou retain full control over product direction, roadmap, and daily task management, while we handle the heavy lifting of recruitment, infrastructure, HR administration, and legal compliance. This model offers the perfect balance of control and flexibility. By tapping into global talent pools, you can accelerate your development cycles, accessing top-tier engineers who might be scarce or prohibitively expensive in your local market. We bridge the distance with rigorous communication protocols and overlapping work hours.",
                 challenges: [
-                    { title: "Communication & Time Zone Barriers", desc: "Managing teams across different time zones and languages can lead to misaligned expectations and delayed feedback loops if not managed with precise protocols." },
-                    { title: "Remote Quality Control", desc: "Ensuring consistent code quality and adherence to your specific engineering standards can be difficult when the team is not physically present in your office." },
-                    { title: "Data Security & IP Protection", desc: "Protecting your Intellectual Property and sensitive data in offshore environments is a primary concern. You need a partner with ironclad legal and technical security frameworks." }
+                    { title: "Communication & Time Zone Barriers", desc: "Managing teams across different time zones and languages can lead to misaligned expectations and delayed feedback loops if not managed with precise protocols.", icon: "fa-regular fa-earth-americas" },
+                    { title: "Remote Quality Control", desc: "Ensuring consistent code quality and adherence to your specific engineering standards can be difficult when the team is not physically present in your office.", icon: "fa-regular fa-bug-slash" },
+                    { title: "Data Security & IP Protection", desc: "Protecting your Intellectual Property and sensitive data in offshore environments is a primary concern. You need a partner with ironclad legal and technical security frameworks.", icon: "fa-regular fa-file-shield" }
                 ],
                 keyBenefits: [
-                    { title: "Significant Cost Efficiency", desc: "Reduce your operational and development costs by up to 60% by leveraging global talent arbitrage, without sacrificing technical quality or output." },
-                    { title: "Access to Global Talent", desc: "Break free from local hiring constraints. Access a limitless pool of world-class engineers, architects, and developers from top global tech hubs." },
-                    { title: "Continuous 24/7 Productivity", desc: "Leverage time zone differences to your advantage. Adopt a 'follow-the-sun' model where development and QA/testing happen around the clock, accelerating delivery." }
+                    {
+                        title: "Significant Cost Efficiency",
+                        icon: "fa-regular fa-sack-dollar",
+                        items: [
+                            "Save up to 60% on costs.",
+                            "Leverage global arbitration.",
+                            "No overhead infrastructure expenses."
+                        ]
+                    },
+                    {
+                        title: "Access to Global Talent",
+                        icon: "fa-regular fa-globe-pointer",
+                        items: [
+                            "Unlock world-class engineers.",
+                            "Bypass local shortages.",
+                            "On-demand specialized skills."
+                        ]
+                    },
+                    {
+                        title: "Continuous 24/7 Productivity",
+                        icon: "fa-regular fa-sun-cloud",
+                        items: [
+                            "Folow-the-sun workflows.",
+                            "Accelerate release cycles.",
+                            "Round-the-clock support."
+                        ]
+                    },
+                    {
+                        title: "Rapid Scalability",
+                        icon: "fa-regular fa-layer-group",
+                        items: [
+                            "Add engineers in days.",
+                            "Scale down post-launch.",
+                            "Flexible resource allocation."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "State-of-the-art offshore development centers with enterprise-grade infrastructure and connectivity.",
-                    "Guaranteed overlap hours to ensure real-time collaboration and daily synchronized stand-ups.",
-                    "Strict IP protection, NDAs, and ISO-certified security protocols to keep your assets safe."
+                whyUsItems: [
+                    {
+                        title: "World-Class ODCs",
+                        desc: "State-of-the-art offshore delivery centers equipped with enterprise-grade infrastructure and high-speed connectivity.",
+                        icon: "fa-regular fa-building-columns"
+                    },
+                    {
+                        title: "Guaranteed Overlap",
+                        desc: "Mandatory shared working hours to ensure real-time collaboration and seamless daily stand-ups.",
+                        icon: "fa-regular fa-clock-rotate-left"
+                    },
+                    {
+                        title: "Ironclad Security",
+                        desc: "ISO-certified security protocols, strict NDAs, and secure VPS access to protect your IP at all costs.",
+                        icon: "fa-regular fa-lock-keyhole"
+                    },
+                    {
+                        title: "Cultural Alignment",
+                        desc: "Teams trained in western business culture and Agile methodologies to integrate smoothly with your staff.",
+                        icon: "fa-regular fa-handshake-angle"
+                    },
+                    {
+                        title: "Transparent Management",
+                        desc: "Full visibility into your team's activity with direct access and regular performance reporting.",
+                        icon: "fa-regular fa-chalkboard-user"
+                    },
+                    {
+                        title: "Scalability on Demand",
+                        desc: "Flexibility to add or remove resources quickly as your project requirements evolve.",
+                        icon: "fa-regular fa-layer-group"
+                    }
                 ],
                 faqs: [
                     { question: "How do you handle time zone differences?", answer: "We structure mandatory overlap hours for meetings and provide clear, asynchronous communication protocols to ensure smooth collaboration." },
@@ -208,22 +589,86 @@ export const serviceCategories = [
             {
                 id: "enterprise-modernization",
                 title: "Data, Cloud & Enterprise Modernization",
+                metaTitle: "Enterprise Modernization & Cloud Migration | enfycon",
+                metaDescription: "Modernize legacy systems and migrate to the cloud with enfycon. We specialize in re-platforming, data estate modernization, and building scalable cloud-native architectures.",
+                keywords: ["Enterprise Modernization", "Cloud Migration", "Legacy System Migration", "Data Estate Modernization", "Cloud-Native Architecture", "Mainframe Modernization", "Digital Transformation"],
                 desc: "Modernize your enterprise infrastructure with cloud-native solutions and advanced data management strategies.",
+                catchyTitle: "Future-Proof Your Foundation",
                 overview: "In the era of digital disruption, legacy systems are often the greatest bottleneck to innovation. enfycon’s Data, Cloud & Enterprise Modernization service helps organizations break free from technological silos and migrate to agile, cloud-native architectures. We don't just 'lift and shift'; we re-platform and re-architect your data estate to leverage the full power of the cloud. From migrating monolithic databases to distributed Snowflake or BigQuery environments, to containerizing legacy applications with Kubernetes, we ensure your infrastructure is scalable, secure, and cost-optimized.\n\nOur modernization roadmap starts with a comprehensive assessment of your existing technical debt and data quality. We implement robust Data Governance frameworks and master data management strategies to ensure that your modernized environment is built on a foundation of trust. By integrating DevOps and DataOps practices, we enable continuous delivery and automated infrastructure management. Whether you are moving to AWS, Azure, or GCP, we provide the expertise to ensure a seamless transition that minimizes downtime and maximizes business agility.",
                 challenges: [
-                    { title: "Legacy System Complexity", desc: "Monolithic architectures and deeply 'entangled' legacy codebases make migration risky and slow. Understanding the interdependencies between old systems is a massive documentation and engineering challenge." },
-                    { title: "Data Migration & Consistency", desc: "Moving petabytes of data while maintaining zero downtime and absolute data integrity is a complex task. Ensuring consistency between the old and new systems during the transition phase is critical." },
-                    { title: "Skills & Cultural Gap", desc: "Cloud-native operations require a fundamental shift in skills and mindset. Teams often struggle to adapt to infrastructure-as-code, microservices, and automated governance models." }
+                    { title: "Legacy System Complexity", desc: "Monolithic architectures and deeply 'entangled' legacy codebases make migration risky and slow. Understanding the interdependencies between old systems is a massive documentation and engineering challenge.", icon: "fa-regular fa-sitemap" },
+                    { title: "Data Migration & Consistency", desc: "Moving petabytes of data while maintaining zero downtime and absolute data integrity is a complex task. Ensuring consistency between the old and new systems during the transition phase is critical.", icon: "fa-regular fa-database-arrow-right" },
+                    { title: "Skills & Cultural Gap", desc: "Cloud-native operations require a fundamental shift in skills and mindset. Teams often struggle to adapt to infrastructure-as-code, microservices, and automated governance models.", icon: "fa-regular fa-users-gear" }
                 ],
                 keyBenefits: [
-                    { title: "Unprecedented Scalability", desc: "Break free from hardware constraints. Our cloud-native architectures allow your data and applications to scale elastically with demand, ensuring high performance even during peak loads." },
-                    { title: "Reduced Total Cost of Ownership", desc: "Eliminate expensive on-premise hardware maintenance and licensing. Move to a pay-as-you-go model that optimizes compute and storage costs based on actual usage." },
-                    { title: "Faster Time-to-Market", desc: "Modern architectures enable faster development cycles. Deploy new features and data products in days instead of months by leveraging automated pipelines and reusable cloud services." }
+                    {
+                        title: "Unprecedented Scalability",
+                        icon: "fa-regular fa-cloud-arrow-up",
+                        items: [
+                            "Elastic auto-scaling.",
+                            "Handle peak loads effortlessly.",
+                            "Global content delivery."
+                        ]
+                    },
+                    {
+                        title: "Reduced Total Cost of Ownership",
+                        icon: "fa-regular fa-money-bill-trend-up",
+                        items: [
+                            "Pay-as-you-go models.",
+                            "Eliminate hardware maintenance.",
+                            "Optimized resource usage."
+                        ]
+                    },
+                    {
+                        title: "Faster Time-to-Market",
+                        icon: "fa-regular fa-rocket-launch",
+                        items: [
+                            "Rapid feature deployment.",
+                            "Automated CI/CD pipelines.",
+                            "Agile development cycles."
+                        ]
+                    },
+                    {
+                        title: "Enhanced Security & Compliance",
+                        icon: "fa-regular fa-shield-check",
+                        items: [
+                            "Built-in cloud security.",
+                            "Automated compliance checks.",
+                            "Zero-trust network access."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Certified expertise across AWS, Azure, and Google Cloud Platform (GCP).",
-                    "Proven 4-pillar modernization framework: Assess, Strategize, Migrate, and Optimize.",
-                    "Deep focus on zero-downtime migrations and legacy-to-cloud data synchronization."
+                whyUsItems: [
+                    {
+                        title: "Migration Framework",
+                        desc: "Proven 4-pillar methodology: Assess, Strategize, Migrate, and Optimize for risk-free transitions.",
+                        icon: "fa-regular fa-map-location-dot"
+                    },
+                    {
+                        title: "Multi-Cloud Certified",
+                        desc: "Deep expertise across AWS, Azure, and Google Cloud Platform (GCP) for hybrid and multi-cloud strategies.",
+                        icon: "fa-regular fa-cloud-nodes"
+                    },
+                    {
+                        title: "Legacy-to-Cloud Specialists",
+                        desc: "Experts in decomposing monolithic mainframes and legacy databases into modern microservices.",
+                        icon: "fa-regular fa-server-arrow-up-right"
+                    },
+                    {
+                        title: "Zero-Downtime Focus",
+                        desc: "Advanced cutover strategies including canary deployments and blue/green releases to keep business running.",
+                        icon: "fa-regular fa-toggle-on"
+                    },
+                    {
+                        title: "Data Integrity First",
+                        desc: "Rigorous validation and reconciliation processes to ensure no data is lost or corrupted in transit.",
+                        icon: "fa-regular fa-file-contract"
+                    },
+                    {
+                        title: "FinOps Optimization",
+                        desc: "We build cost-aware architectures that ensure you get maximum value from your cloud spend.",
+                        icon: "fa-regular fa-sack-dollar"
+                    }
                 ],
                 faqs: [
                     { question: "How do you handle zero-downtime migrations?", answer: "We use a combination of pilot-light strategies, real-time data replication tools, and phased traffic cutovers to ensure your business remains operational during the entire migration." },
@@ -238,22 +683,86 @@ export const serviceCategories = [
             {
                 id: "advanced-analytics",
                 title: "Advanced Analytics & Business Intelligence",
+                metaTitle: "Advanced Analytics & Business Intelligence Services | enfycon",
+                metaDescription: "Turn data into decisions with enfycon's advanced analytics and BI services. We build predictive models, real-time dashboards, and data storytelling solutions (PowerBI, Tableau, Looker).",
+                keywords: ["Business Intelligence", "Advanced Analytics", "Data Visualization", "Predictive Analytics", "Power BI Consultants", "Tableau Experts", "Data Storytelling", "Decision Intelligence"],
                 desc: "Transform data into actionable insights with powerful business intelligence dashboards, predictive analytics, and advanced visualization solutions.",
+                catchyTitle: "From Data Points to Decision Power",
                 overview: "Data is the new oil, but analytics is the refinery. enfycon’s Advanced Analytics & Business Intelligence (BI) service empowers decision-makers with the clarity they need to navigate complex markets. We go beyond descriptive 'what happened' reporting to provide diagnostic 'why it happened' and predictive 'what will happen' insights. By building sophisticated BI ecosystems, we transform fragmented data points into cohesive narratives that drive strategic action, optimize operations, and uncover hidden revenue opportunities.\n\nWe specialize in high-impact visualization, using tools like Power BI, Tableau, and custom D3.js dashboards to make data intuitive and accessible to everyone in your organization—not just data scientists. Our approach includes building automated data warehouses, implementing natural language query capabilities, and integrating machine learning models for real-time forecasting. We help you establish a single source of truth, eliminating the 'war of spreadsheets' and fostering a truly data-driven culture. Whether it's supply chain optimization, churn prediction, or financial modeling, we deliver insights that matter.",
                 challenges: [
-                    { title: "Information Overload", desc: "Businesses are drowning in data but starving for insights. Sorting through noise to find actionable signals is the primary challenge in modern BI strategy." },
-                    { title: "Low Dashboard Adoption", desc: "Many BI projects fail because dashboards are too complex or irrelevant to business users. Ensuring that insights are actually used to make decisions requires a user-centric design approach." },
-                    { title: "Inaccurate or Siloed Data", desc: "If the underlying data is flawed, the insights will be too. Integrating data from disparate sources while maintaining quality and lineage is a continuous struggle for enterprise analytics." }
+                    { title: "Information Overload", desc: "Businesses are drowning in data but starving for insights. Sorting through noise to find actionable signals is the primary challenge in modern BI strategy.", icon: "fa-regular fa-ear-listen" },
+                    { title: "Low Dashboard Adoption", desc: "Many BI projects fail because dashboards are too complex or irrelevant to business users. Ensuring that insights are actually used to make decisions requires a user-centric design approach.", icon: "fa-regular fa-user-xmark" },
+                    { title: "Inaccurate or Siloed Data", desc: "If the underlying data is flawed, the insights will be too. Integrating data from disparate sources while maintaining quality and lineage is a continuous struggle for enterprise analytics.", icon: "fa-regular fa-database-slash" }
                 ],
                 keyBenefits: [
-                    { title: "Strategic Decision Support", desc: "Replace intuition with data. Our predictive models and 'what-if' analysis tools allow executives to simulate different scenarios and make high-stakes decisions with confidence." },
-                    { title: "Real-Time Operational Clarity", desc: "Monitor your KPIs in real-time. Identify bottlenecks, detect anomalies, and respond to market changes instantly with automated alerting and live streaming dashboards." },
-                    { title: "Enhanced ROI on Data Assets", desc: "Stop letting your data sit idle. We help you monetize your data by identifying new market segments, optimizing pricing strategies, and improving customer lifetime value." }
+                    {
+                        title: "Strategic Decision Support",
+                        icon: "fa-regular fa-chess",
+                        items: [
+                            "Data-backed executive planning.",
+                            "Scenario simulation & 'What-if' models.",
+                            "Eliminate guesswork."
+                        ]
+                    },
+                    {
+                        title: "Real-Time Operational Clarity",
+                        icon: "fa-regular fa-eye",
+                        items: [
+                            "Live KPI monitoring.",
+                            "Instant anomaly detection.",
+                            "Proactive bottleneck identification."
+                        ]
+                    },
+                    {
+                        title: "Enhanced ROI on Data",
+                        icon: "fa-regular fa-coins",
+                        items: [
+                            "Monetize hidden patterns.",
+                            "Optimize pricing strategies.",
+                            "Stop revenue leakage."
+                        ]
+                    },
+                    {
+                        title: "Democratized Data Access",
+                        icon: "fa-regular fa-users-rays",
+                        items: [
+                            "Self-service BI for all teams.",
+                            "Natural language querying.",
+                            "Reduced dependency on IT."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Expertise in complex data storytelling and executive-level dashboard design.",
-                    "Full-stack analytics capability, from data warehousing (Snowflake/Redshift) to advanced ML modeling.",
-                    "Strong focus on self-service BI, empowering your team to explore data independently."
+                whyUsItems: [
+                    {
+                        title: "Visualization Mastery",
+                        desc: "Experts in UX-driven dashboard design using Power BI, Tableau, Looker, and custom D3.js.",
+                        icon: "fa-regular fa-chart-pie"
+                    },
+                    {
+                        title: "Full-Stack Analytics",
+                        desc: "We bridge the gap between back-end data warehousing (Snowflake/Redshift) and front-end insights.",
+                        icon: "fa-regular fa-layer-group"
+                    },
+                    {
+                        title: "Predictive Capability",
+                        desc: "Integration of Machine Learning models directly into BI workflows for forecasting and trend analysis.",
+                        icon: "fa-regular fa-crystal-ball"
+                    },
+                    {
+                        title: "Data Storytelling",
+                        desc: "We structure dashboards to tell a clear, compelling business narrative, not just show raw numbers.",
+                        icon: "fa-regular fa-book-open"
+                    },
+                    {
+                        title: "Performance Optimization",
+                        desc: "Ensuring dashboards load instantly even when processing millions of data rows.",
+                        icon: "fa-regular fa-gauge-high"
+                    },
+                    {
+                        title: "Change Management",
+                        desc: "We provide training and support to foster a data-driven culture and ensure high adoption rates.",
+                        icon: "fa-regular fa-chalkboard-teacher"
+                    }
                 ],
                 faqs: [
                     { question: "What visualization tools do you specialize in?", answer: "We are experts in Power BI, Tableau, Looker, and custom web-based visualizations using D3.js and Highcharts." },
@@ -268,22 +777,86 @@ export const serviceCategories = [
             {
                 id: "data-engineering",
                 title: "Data Engineering & Pipeline Automation",
+                metaTitle: "Data Engineering & ETL Automation Services | enfycon",
+                metaDescription: "Build robust, scalable data pipelines with enfycon. We specialize in DataOps, ETL automation, and real-time streaming architectures (Spark, Kafka, Flink).",
+                keywords: ["Data Engineering", "ETL Pipelines", "Data Automation", "Apache Spark", "Kafka Streaming", "Data Warehousing", "DataOps", "Big Data Engineering"],
                 desc: "Build robust data pipelines and automated workflows to streamline data processing and ensure data quality.",
+                catchyTitle: "The Backbone of Intelligent Business",
                 overview: "The most advanced AI and analytics are only as good as the pipelines that feed them. enfycon’s Data Engineering & Pipeline Automation service focuses on building the 'plumbing' of the modern enterprise—the robust, automated, and scalable systems that move, clean, and transform data from source to consumption. We specialize in building low-latency ETL/ELT pipelines that handle massive volumes of structured and unstructured data, ensuring that your data scientists and analysts always have high-quality data at their fingertips.\n\nWe leverage state-of-the-art technologies like Apache Spark, Flink, Kafka, and Airflow to build pipelines that are resilient to failure and easy to maintain. Our engineering approach prioritizes 'Data-as-Code', applying software engineering best practices like unit testing, version control, and CI/CD to the data domain. We implement automated data quality checks, anomaly detection, and comprehensive logging to ensure the integrity of your data estate. Whether you're building a real-time streaming platform or a petabyte-scale data lake, we provide the architectural foundation for a high-performance data organization.",
                 challenges: [
-                    { title: "Data Pipeline Fragility", desc: "Manual or poorly architected pipelines break frequently when upstream data formats change. Building 'self-healing' pipelines that can handle schema drift is a major technical challenge." },
-                    { title: "Managing Exponential Data Growth", desc: "As data volumes grow, traditional batches often fail to finish within ever-shrinking windows. Scaling pipelines to handle petabytes of data while keeping costs controlled is a constant battle." },
-                    { title: "Data Quality & Observability", desc: "Hidden data errors can silently corrupt downstream models. Gaining visibility into the 'health' of data as it moves through complex multi-stage pipelines is crucial but difficult." }
+                    { title: "Data Pipeline Fragility", desc: "Manual or poorly architected pipelines break frequently when upstream data formats change. Building 'self-healing' pipelines that can handle schema drift is a major technical challenge.", icon: "fa-regular fa-crack" },
+                    { title: "Managing Exponential Data Growth", desc: "As data volumes grow, traditional batches often fail to finish within ever-shrinking windows. Scaling pipelines to handle petabytes of data while keeping costs controlled is a constant battle.", icon: "fa-regular fa-chart-line-up" },
+                    { title: "Data Quality & Observability", desc: "Hidden data errors can silently corrupt downstream models. Gaining visibility into the 'health' of data as it moves through complex multi-stage pipelines is crucial but difficult.", icon: "fa-regular fa-microscope" }
                 ],
                 keyBenefits: [
-                    { title: "Rock-Solid Data Reliability", desc: "Our automated pipelines include built-in validation and error-handling, ensuring that your downstream applications never receive 'garbage' data." },
-                    { title: "Accelerated Data Availability", desc: "Move from daily batches to real-time streaming. Get insights into your business as it happens, enabling faster response times for critical events." },
-                    { title: "Lower Pipeline Maintenance", desc: "By treating data pipelines as code and automating monitoring, we significantly reduce the manual effort required for data ops, freeing your team for higher-value work." }
+                    {
+                        title: "Rock-Solid Data Reliability",
+                        icon: "fa-regular fa-shield-check",
+                        items: [
+                            "Automated validation & cleansing.",
+                            "Self-healing workflows.",
+                            "Zero 'garbage' data downstream."
+                        ]
+                    },
+                    {
+                        title: "Accelerated Data Availability",
+                        icon: "fa-regular fa-stopwatch",
+                        items: [
+                            "Real-time streaming (Kafka).",
+                            "Low-latency processing.",
+                            "Instant insight generation."
+                        ]
+                    },
+                    {
+                        title: "Lower Pipeline Maintenance",
+                        icon: "fa-regular fa-wrench",
+                        items: [
+                            "Data-as-Code principles.",
+                            "Reduced manual toil.",
+                            "Automated error recovery."
+                        ]
+                    },
+                    {
+                        title: "Scalable Architecture",
+                        icon: "fa-regular fa-server-group",
+                        items: [
+                            "Handle petabyte-scale loads.",
+                            "Decoupled storage and compute.",
+                            "Cost-effective scaling."
+                        ]
+                    }
                 ],
-                whyenfycon: [
-                    "Deep expertise in both batch and real-time streaming architectures (Spark, Kafka, Flink).",
-                    "Strong focus on DataOps and automated data quality frameworks.",
-                    "Experience building petabyte-scale data lakes and warehouses for high-tech enterprises."
+                whyUsItems: [
+                    {
+                        title: "Big Data Tech Stack",
+                        desc: "Deep expertise in Modern Data Stack: Spark, Databricks, Snowflake, Kafka, and Airflow.",
+                        icon: "fa-regular fa-server"
+                    },
+                    {
+                        title: "DataOps Methodology",
+                        desc: "We bring CI/CD, version control, and automated testing to your data pipelines for software-grade reliability.",
+                        icon: "fa-regular fa-code-commit"
+                    },
+                    {
+                        title: "Real-Time Specialists",
+                        desc: "Proven track record in building low-latency streaming architectures for mission-critical applications.",
+                        icon: "fa-regular fa-bolt"
+                    },
+                    {
+                        title: "Data Observability",
+                        desc: "Implementation of monitoring tools to detect schema drift, freshness issues, and volume anomalies instantly.",
+                        icon: "fa-regular fa-glasses"
+                    },
+                    {
+                        title: "Governance & Compliance",
+                        desc: "Automated lineage tracking and PII masking to ensure your pipelines meet regulatory standards.",
+                        icon: "fa-regular fa-scale-balanced"
+                    },
+                    {
+                        title: "Custom Connector Development",
+                        desc: "Ability to build custom integration points for proprietary or legacy systems that standard tools miss.",
+                        icon: "fa-regular fa-plug"
+                    }
                 ],
                 faqs: [
                     { question: "How do you handle 'Schema Drift'?", answer: "We implement dynamic schema mapping and automated validation checks that can detect and alert on upstream changes without breaking the entire pipeline." },
