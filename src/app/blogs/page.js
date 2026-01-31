@@ -7,6 +7,7 @@ import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import LatestBlogHero from "@/components/sections/blogs/LatestBlogHero";
 import { mapPostToCard } from "@/libs/mappers";
 import { getBlogPageData } from "@/libs/wpBlogs";
+import BlogHeroEnterprise from "@/components/sections/blogs/BlogHeroEnterprise";
 
 export const metadata = {
 	title: "Blogs - enfycon",
@@ -37,6 +38,32 @@ export default async function BlogPage(props) {
 	// Map initial posts to the format expected by BlogCard1
 	const initialPosts = nodes.map((node) => mapPostToCard(node, category));
 
+	// Determine Hero Title and Display Name
+	let heroTitle = "All Posts";
+	if (category) {
+		// Try to find matching category name from the first post
+		const firstPost = nodes?.[0];
+		const matchedCat = firstPost?.categories?.nodes?.find((c) => c.slug === category);
+		if (matchedCat) {
+			heroTitle = matchedCat.name;
+		} else {
+			// Fallback: Title Case the slug
+			heroTitle = category
+				.split("-")
+				.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+				.join(" ");
+		}
+	}
+
+	// Determine Breadcrumbs
+	// Component already renders "Home > Blogs", so we just append the current section
+	const breadcrumbs = (
+		<>
+			<span className="mx-2">&gt;</span>
+			<span style={{ color: "#4facfe" }}>{heroTitle}</span>
+		</>
+	);
+
 	return (
 		<div>
 			<BackToTop />
@@ -45,6 +72,10 @@ export default async function BlogPage(props) {
 				<div id="smooth-content">
 					<main>
 						<HeaderSpace />
+						<BlogHeroEnterprise
+							customTitle={heroTitle}
+							breadcrumbOverride={breadcrumbs}
+						/>
 						<LatestBlogHero post={latestPost} />
 
 						<section className="tj-blog-section section-gap pt-4">
