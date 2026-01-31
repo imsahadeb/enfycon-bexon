@@ -15,7 +15,7 @@ const Cta3 = () => {
 								<span>Let’s Talk to</span>{" "}
 								<span className="cta-img wow fadeInUp" data-wow-delay=".3s">
 									<img src="/images/team/team-1.webp" alt="" />
-									<Link className="tji-icon-btn" href="/contact">
+									<Link className="tji-icon-btn" href="/contact-us">
 										<i className="tji-arrow-right-long"></i>
 									</Link>
 								</span>{" "}

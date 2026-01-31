@@ -27,7 +27,7 @@ const Hero9 = () => {
 									delivering excellence across an projects. Recognized by the
 									industry leaders, of our award.
 								</p>
-								<ButtonPrimary text={"Get Started"} url={"/contact"} />
+								<ButtonPrimary text={"Get Started"} url={"/contact-us"} />
 							</div>
 						</div>
 						<div className="h9-hero-social wow fadeInUp" data-wow-delay="0.9s">

@@ -178,7 +178,7 @@ export const industriesData = [
             title: "Future-Proof Your Banking Operations",
             desc: "Partner with Enfycon to leverage AI for secure, efficient, and customer-first banking solutions.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         },
         details: [
             {
@@ -368,7 +368,7 @@ export const industriesData = [
             title: "Transform Your Financial Services",
             desc: "Leverage our expertise to build secure, efficient, and innovative financial solutions.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -546,7 +546,7 @@ export const industriesData = [
             title: "Ready to Build AI-Powered Healthcare Systems?",
             desc: "Let Enfycon help you unlock clinical, operational, and research excellence with custom AI solutions.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         },
         details: [
             {
@@ -736,7 +736,7 @@ export const industriesData = [
             title: "Revolutionize Your Workforce Management",
             desc: "Empower your HR team with intelligent tools to attract, retain, and develop top talent.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -914,7 +914,7 @@ export const industriesData = [
             title: "Modernize Your Law Practice",
             desc: "Adopt cutting-edge legal technology to increase efficiency, reduce costs, and serve clients better.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -1092,7 +1092,7 @@ export const industriesData = [
             title: "Optimize Your Logistics Chain",
             desc: "Drive efficiency and sustainability in your logistics operations with our smart solutions.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -1270,7 +1270,7 @@ export const industriesData = [
             title: "Build the Factory of the Future",
             desc: "Transform your manufacturing operations with intelligent automation and data-driven insights.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -1448,7 +1448,7 @@ export const industriesData = [
             title: "Strengthen Your Supply Chain",
             desc: "Build a resilient, efficient, and transparent supply chain with our advanced technology solutions.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
     {
@@ -1626,7 +1626,7 @@ export const industriesData = [
             title: "Redefine the Travel Experience",
             desc: "Partner with us to build intelligent, immersive, and efficient travel solutions that travelers love.",
             buttonText: "Contact Us",
-            buttonLink: "/contact"
+            buttonLink: "/contact-us"
         }
     },
 ];

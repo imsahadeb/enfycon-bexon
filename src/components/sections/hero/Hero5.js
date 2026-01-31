@@ -15,7 +15,7 @@ const Hero5 = () => {
 						Expert Solutions for <TitleSlider /> Modern Enterprises.
 					</h1>
 					<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
-						<ButtonPrimary text={"Get Started Now"} url={"/contact"} />
+						<ButtonPrimary text={"Get Started Now"} url={"/contact-us"} />
 					</div>
 				</div>
 				<div className="solution-box">

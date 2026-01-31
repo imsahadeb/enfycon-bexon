@@ -66,7 +66,7 @@ const Footer = () => {
 								<h5 className="title">Resources</h5>
 								<ul>
 									<li>
-										<Link href="/contact">Contact us</Link>
+										<Link href="/contact-us">Contact us</Link>
 									</li>
 									<li>
 										<Link href="/team">Team Member</Link>

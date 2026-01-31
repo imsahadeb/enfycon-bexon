@@ -70,7 +70,7 @@ const Footer9 = () => {
 								<h5 className="title">Resources</h5>
 								<ul>
 									<li>
-										<Link href="/contact">Contact us</Link>
+										<Link href="/contact-us">Contact us</Link>
 									</li>
 									<li>
 										<Link href="/team">Team Member</Link>
@@ -187,7 +187,7 @@ const Footer9 = () => {
 								<div className="copyright-menu">
 									<ul>
 										<li>
-											<Link href="/contact">Privacy Policy</Link>
+											<Link href="/contact-us">Privacy Policy</Link>
 										</li>
 										<li>
 											<Link href="/terms-and-conditions">

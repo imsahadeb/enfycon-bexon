@@ -64,7 +64,7 @@ const Process3 = () => {
 								className="d-none d-lg-inline-flex wow fadeInUp"
 								data-wow-delay=".6s"
 							>
-								<ButtonPrimary text={"Request a Call"} url={"/contact"} />
+								<ButtonPrimary text={"Request a Call"} url={"/contact-us"} />
 							</div>
 						</div>
 					</div>

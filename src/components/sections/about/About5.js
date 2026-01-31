@@ -49,7 +49,7 @@ const About5 = () => {
 								</div>
 							</div>
 							<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
-								<ButtonPrimary text={"Know More Us"} url={"/contact"} />
+								<ButtonPrimary text={"Know More Us"} url={"/contact-us"} />
 							</div>
 						</div>
 					</div>

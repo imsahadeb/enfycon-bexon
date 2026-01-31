@@ -137,7 +137,7 @@ const ServicesDetailsPrimary = ({ option }) => {
 
 								{/* CTA Button */}
 								<div className="mt-5 wow fadeInUp" data-wow-delay=".3s">
-									<Link href="/contact" className="tj-btn-primary">
+									<Link href="/contact-us" className="tj-btn-primary">
 										Get Started Now <i className="tji-arrow-right"></i>
 									</Link>
 								</div>

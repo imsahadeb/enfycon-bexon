@@ -35,7 +35,7 @@ export const footerData = {
         { label: "iWac.ai", link: "#" },
     ],
     otherLinks: [
-        { label: "Contact Us", link: "/contact" },
+        { label: "Contact Us", link: "/contact-us" },
         { label: "Feedback", link: "#" },
         { label: "Career", link: "/careers" },
         // { label: "Recruitment Fraud Alert", link: "#" },

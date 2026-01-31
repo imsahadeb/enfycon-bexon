@@ -20,7 +20,7 @@ const Cta2 = () => {
 											>
 												<ButtonPrimary
 													text={"Contact Us"}
-													url={"/contact"}
+													url={"/contact-us"}
 													className={"tj-primary-btn-lg"}
 												/>
 											</div>

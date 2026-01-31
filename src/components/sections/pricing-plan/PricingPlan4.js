@@ -60,7 +60,7 @@ const PricingPlan4 = () => {
 									</ul>
 								</div>
 								<div className="pricing-btn">
-									<Link className="text-btn" href="/contact">
+									<Link className="text-btn" href="/contact-us">
 										<span className="btn-text">
 											<span>Chose Plan</span>
 										</span>
@@ -119,7 +119,7 @@ const PricingPlan4 = () => {
 									</ul>
 								</div>
 								<div className="pricing-btn">
-									<Link className="text-btn" href="/contact">
+									<Link className="text-btn" href="/contact-us">
 										<span className="btn-text">
 											<span>Chose Plan</span>
 										</span>
@@ -175,7 +175,7 @@ const PricingPlan4 = () => {
 									</ul>
 								</div>
 								<div className="pricing-btn">
-									<Link className="text-btn" href="/contact">
+									<Link className="text-btn" href="/contact-us">
 										<span className="btn-text">
 											<span>Chose Plan</span>
 										</span>

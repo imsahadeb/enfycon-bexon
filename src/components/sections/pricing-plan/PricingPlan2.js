@@ -42,7 +42,7 @@ const PricingPlan2 = () => {
 												<div className="pricing-btn">
 													<ButtonPrimary
 														text={"Chose Plan"}
-														url={"/contact"}
+														url={"/contact-us"}
 														isTextBtn={true}
 													/>
 												</div>
@@ -107,7 +107,7 @@ const PricingPlan2 = () => {
 												<div className="pricing-btn">
 													<ButtonPrimary
 														text={"Chose Plan"}
-														url={"/contact"}
+														url={"/contact-us"}
 														isTextBtn={true}
 													/>
 												</div>
@@ -173,7 +173,7 @@ const PricingPlan2 = () => {
 												<div className="pricing-btn">
 													<ButtonPrimary
 														text={"Chose Plan"}
-														url={"/contact"}
+														url={"/contact-us"}
 														isTextBtn={true}
 													/>
 												</div>

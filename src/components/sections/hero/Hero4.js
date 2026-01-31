@@ -13,7 +13,7 @@ const Hero4 = () => {
 						Empowering Your Business with Smart Solutions.
 					</h1>
 					<div className="banner-desc-area wow fadeInUp" data-wow-delay=".7s">
-						<ButtonPrimary text={"Get Started"} url={"/contact"} />
+						<ButtonPrimary text={"Get Started"} url={"/contact-us"} />
 						<div className="banner-desc">
 							Committed to delivering innovative solutions that drive success.
 							With a focus on quality.

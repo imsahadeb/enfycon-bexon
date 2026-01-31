@@ -37,7 +37,7 @@ const Features = ({ type, id }) => {
 										</h2>
 									</div>
 									<div className="btn-wrap wow fadeInUp" data-wow-delay=".6s">
-										<ButtonPrimary text="Request a Call" url="/contact" />
+										<ButtonPrimary text="Request a Call" url="/contact-us" />
 									</div>
 								</div>
 							</div>

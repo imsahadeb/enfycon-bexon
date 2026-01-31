@@ -47,7 +47,7 @@ const Hero10 = () => {
 								className="banner-desc-area wow fadeInUp"
 								data-wow-delay=".7s"
 							>
-								<ButtonPrimary text={"Get Started"} url={"/contact"} />
+								<ButtonPrimary text={"Get Started"} url={"/contact-us"} />
 								<div className="banner-desc">
 									Recognized by industryaward leaders, award winning team has be
 									a proven record.

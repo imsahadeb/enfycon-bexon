@@ -130,7 +130,7 @@ const About6 = () => {
 									<Link
 										className="text-btn wow fadeInLeft"
 										data-wow-delay=".5s"
-										href="/contact"
+										href="/contact-us"
 									>
 										<span className="btn-text">
 											<span>Contact us</span>

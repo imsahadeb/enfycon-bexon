@@ -20,7 +20,7 @@ const Portfolios5 = () => {
 										</h2>
 									</div>
 									<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
-										<ButtonPrimary text={"Explore More"} url={"/contact"} />
+										<ButtonPrimary text={"Explore More"} url={"/contact-us"} />
 									</div>
 								</div>
 							</div>

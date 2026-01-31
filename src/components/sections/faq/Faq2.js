@@ -70,7 +70,7 @@ const Faq2 = ({
 									{desc}
 								</p>
 								<div className="wow fadeInUp" data-wow-delay=".8s">
-									<ButtonPrimary text={"Request a Call"} url={"/contact"} />
+									<ButtonPrimary text={"Request a Call"} url={"/contact-us"} />
 								</div>
 							</div>
 						</div>

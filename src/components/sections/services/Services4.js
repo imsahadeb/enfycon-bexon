@@ -40,7 +40,7 @@ const Services4 = () => {
 								<span>
 									<i className="tji-box"></i>Unlock tailored solutions without
 									the wasted effort.{" "}
-									<Link href="/contact">Talk to us today</Link>
+									<Link href="/contact-us">Talk to us today</Link>
 								</span>
 							</p>
 						</div>

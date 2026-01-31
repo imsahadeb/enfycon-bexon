@@ -12,7 +12,7 @@ const Hero6 = () => {
 							Innovative Solutions for a Brighter Future of Business.
 						</h1>
 						<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
-							<ButtonPrimary text={"Get Started"} url={"/contact"} />
+							<ButtonPrimary text={"Get Started"} url={"/contact-us"} />
 						</div>
 						<div className="h6-hero-bottom wow fadeInLeft" data-wow-delay=".9s">
 							<div className="h6-hero-history">

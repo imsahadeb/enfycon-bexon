@@ -35,7 +35,7 @@ const Hero3 = () => {
 								Evolution & Trust.
 							</h1>
 							<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
-								<ButtonPrimary text={"Learn More"} url={"/contact"} />
+								<ButtonPrimary text={"Learn More"} url={"/contact-us"} />
 								<Link className="number" href={`tel:${siteConfig.phone.link}`}>
 									<i className="tji-phone"></i>
 									<span>{siteConfig.phone.display}</span>
